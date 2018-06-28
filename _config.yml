@@ -42,4 +42,3 @@ exclude: ['README.md', 'LICENSE']
 collections:
   springboot:
     output: true
-    permalink: /springboot/springboot1.html
