@@ -39,7 +39,8 @@ body {
 
 .well h1 {
     color: #048c9b;
-    font-size: 1.3em;
+    font-size: 1.3em;    
+    background-color:#d7e4e5;
 }
 
 .author {
