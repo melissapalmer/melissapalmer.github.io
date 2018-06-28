@@ -6,8 +6,6 @@ layout: default
 	<h1>Spring Boot</h1>
 	
 	{% for item in site.springboot %}
-	  <h2>{{ item.title }}</h2>
-	  <p>{{ item.description }}</p>
-	  <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+	  <p><a href="{{ item.url }}">{{ item.title }} - {{ item.description }}</a></p>
 	{% endfor %}
 </div>
