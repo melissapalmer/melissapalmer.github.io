@@ -40,6 +40,6 @@ gems: ['jekyll-paginate']
 exclude: ['README.md', 'LICENSE']
 
 collections:
-- springboot
+  springboot:
     output: true
     permalink: /springboot/springboot1.html
