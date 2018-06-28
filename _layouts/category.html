@@ -2,8 +2,10 @@
 layout: default
 ---
 
-{% for post in site.categories[page.category] %}
-    <a href="{{ post.url | absolute_url }}">
-      {{ post.title }}
-    </a>
-{% endfor %}
+<div class="well">
+	<ul>
+	{% for post in site.categories[page.category] %}   
+	    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+	</ul>
+</div>
