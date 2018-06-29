@@ -61,3 +61,7 @@ body {
 .author a {
     color: #048c9b;
 }
+
+li.social-icons {
+    font-size: 1.8em;
+}
