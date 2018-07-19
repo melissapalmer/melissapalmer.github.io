@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Documentiong Rest APIs in Spring"
+title:  "Documenting Rest APIs in Spring"
 date: 2018-07-19 17:45:09 -0700
 categories: documentation
 tags: 
 - Spring REST Docs
 - SwaggerUI 
-description: Documentiong Rest APIs in Spring.
+description: Documenting Rest APIs in Spring.
 ---
 
-Inspired by [Keycloak's Admin REST API](https://www.keycloak.org/docs-api/4.1/rest-api/index.html) I wanted to create documentation for my REST API that included: nice formatting of the models with as little extra effort above the coding as possible. As well as example request/respones and a Swagger like playground area. 
+Inspired by [Keycloak's Admin REST API](https://www.keycloak.org/docs-api/4.1/rest-api/index.html) I wanted to create documentation for my REST API that included: nice formatting of the models with as little extra effort above the coding as possible. As well as example request/responses and a Swagger like playground area. 
 
 [Swagger](https://swagger.io/) although widely used and well known, requires you to add many annotations to your code base. Personally I found that all the Swagger annotations polluted the code which made it very difficult to read and maintain. For example take a look at this snippet of code below: 
 
