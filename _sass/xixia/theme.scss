@@ -143,7 +143,13 @@ body {
 .navbar-custom .icon-bar {
     background-color: $nav-bar-icon-bar;
 }
-.navbar-custom [class^=”icon”] {
+
+.navbar-custom .icon-github {
     font-size: 23px;
 }
-
+.navbar-custom .icon-linkedin {
+    font-size: 23px;
+}
+.navbar-custom .icon-home {
+    font-size: 23px;
+}
