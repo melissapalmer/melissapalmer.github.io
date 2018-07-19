@@ -16,11 +16,9 @@ layout: default
 <div class="well article">
 {% assign sortedcategories = site.categories.[page.category] %}
 {% for post in sortedcategories %}
-    <h2>{{ post.title | capitalize }}</h2>
-
     <ul>       
         <li><span class="post-date">
-            {% assign date_format = site.date_format.archive %}
+            {% assign date_format = site.date_format.categories %}
             {{ post.date | date: date_format }} </span><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>       
     </ul>
     
