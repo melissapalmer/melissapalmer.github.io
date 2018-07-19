@@ -4,7 +4,7 @@
   <!-- <li><a href="#">One</a></li>
   <li><a href="#">Two</a></li>
   <li><a href="#">Three</a></li>
-  <li><a href="#">Four</a></li> -->
+  <li><a href="#">Four</a></li> 
   {% for link in site.data.links %}
   <li>
     <a href="{{ link.url }}">
@@ -12,4 +12,8 @@
     </a>
   </li> 
   {% endfor %}
+  -->
+  <li><a href="{{ site.baseurl }}/archive.html">{{ trans.archive }}</a></li>
+  <li><a href="{{ site.baseurl }}/categories.html">{{ trans.categories }}</a></li>
+  <li><a href="{{ site.baseurl }}/tags.html">{{ trans.tags }}</a></li>                   
 </ul>
