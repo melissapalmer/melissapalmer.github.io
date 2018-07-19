@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>Simple Category Pages with vanilla Jekyll</h1>
+<h1>{{ page.category | capitalize }}</h1>
 
 {% unless page.content == '' %}
   <p>{{ page.content }}</p>
@@ -17,6 +17,12 @@ layout: default
 {% assign sortedcategories = site.categories.[page.category] %}
 {% for post in sortedcategories %}
     <h2>{{ post.title | capitalize }}</h2>
+
+    <ul>       
+        <li><span class="post-date">
+            {% assign date_format = site.date_format.archive %}
+            {{ post.date | date: date_format }} </span><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>       
+    </ul>
     
 {% endfor %}
 </div>
