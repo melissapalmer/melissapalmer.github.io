@@ -52,3 +52,5 @@ Thanks
 [github-url]: https://github.com/
 [Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
 [xixia-url]: http://xixia.info/
+
+https://www.imgonline.com.ua/eng/crop-photo-into-various-shapes-result.php
