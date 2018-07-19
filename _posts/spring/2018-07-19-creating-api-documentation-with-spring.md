@@ -3,7 +3,7 @@ layout: post
 title:  "Creating API Documentation with Spring"
 date: 2018-07-19 17:45:09 -0700
 categories: spring
-tags: springboot, Spring REST Docs, Spring, Java, SwaggerUI, OpenAPI
+tags: springboot "Spring REST Docs" Spring Java SwaggerUI OpenAPI
 description: Creating API Documentation with Spring.
 ---
 
