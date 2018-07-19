@@ -16,3 +16,7 @@ description: Creating API Documentation with Spring.
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
 
 The Spring Boot RestDocs page is here: https://melissapalmer.github.io/springboot-restdoc-swagger/
+
+References
+====
+- https://www.keycloak.org/docs-api/4.1/rest-api/index.html
