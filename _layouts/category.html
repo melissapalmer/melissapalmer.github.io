@@ -12,3 +12,11 @@ layout: default
   <h2><a href=""></a></h2>
   <p></p>
 {% endfor %}
+
+<div class="well article">
+{% assign sortedcategories = site.categories.[page.category] | sort %}
+{% for post in sortedcategories %}
+    <h2>{{ post.title | capitalize }}</h2>
+    
+{% endfor %}
+</div>
