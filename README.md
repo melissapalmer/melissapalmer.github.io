@@ -54,3 +54,4 @@ Thanks
 [xixia-url]: http://xixia.info/
 
 https://www.imgonline.com.ua/eng/crop-photo-into-various-shapes-result.php
+https://www.chrisanthropic.com/blog/2014/jekyll-themed-category-pages-without-plugins/
