@@ -11,7 +11,7 @@ description: Documenting Rest APIs in Spring.
 
 Inspired by [Keycloak's Admin REST API](https://www.keycloak.org/docs-api/4.1/rest-api/index.html) I wanted to create documentation for my REST API that included: nice formatting of the models with as little extra effort above the coding as possible. As well as example request/responses and a Swagger like playground area. 
 
-[Swagger](https://swagger.io/) although widely used and well known, requires you to add many annotations to your code base. Personally I found that all the Swagger annotations polluted the code which made it very difficult to read and maintain. For example take a look at this snippet of code below: 
+[Swagger](https://swagger.io/) although widely used and well known, requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made it very difficult to read and maintain. For example take a look at this snippet of code below: 
 
 ```java
 @Produces( { MediaType.APPLICATION_JSON } )
@@ -44,9 +44,13 @@ public class Person {
 ```
 
 
-**I set out to look for something that did not add any extra burden on the code.**
+**As such... I set out to look for something that did not add any extra burden on the code.**
 
-Looking around within the Java/Spring world there seem to been two options SwaggerUI and/or Spring REST Docs.
+[Spring REST Docs ](https://spring.io/projects/spring-restdocs) provides ease of combining hand-written documentation written and auto-generated snippets produced by unit tests. "It helps you to produce documentation that is accurate" with minimal extra effort. However there still requires you to code in the request/response JSON fields. As below: 
+
+
+[Spring Auto REST Docs extension](https://scacap.github.io/spring-auto-restdocs/) automates the "recognition and documentation of request and response parameters." and picks up the JavaDoc rather than Swagger annotations to include in documentation. It's also able to automatically pick up the Java's Constraints from annotated fields such as @NotNull.
+
 
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
 
@@ -55,3 +59,5 @@ The Spring Boot RestDocs page is here: [https://melissapalmer.github.io/springbo
 References
 ====
 - [https://www.keycloak.org/docs-api/4.1/rest-api/index.html](https://www.keycloak.org/docs-api/4.1/rest-api/index.html)
+- [Spring REST Docs ](https://spring.io/projects/spring-restdocs) 
+- [Introduction to Spring Auto REST Docs](https://dzone.com/articles/introducing-spring-auto-rest-docs)
