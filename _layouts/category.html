@@ -2,21 +2,15 @@
 layout: default
 ---
 
-<h1>Simple Category Pages with vanilla Jekyll</h1>
-
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
-
-{% for post in site.categories.[page.category] %}
-  <h2><a href=""></a></h2>
-  <p></p>
-{% endfor %}
+<h1>{{ page.category | capitalize }}</h1>
 
 <div class="well article">
 {% assign sortedcategories = site.categories.[page.category] | sort %}
 {% for post in sortedcategories %}
-    <h2>{{ post.title | capitalize }}</h2>
-    
+    <ul>
+    		    <li><span class="post-date">
+                    {% assign date_format = site.date_format.categories %}
+                    {{ post.date | date: date_format }} </span><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+    </ul>    
 {% endfor %}
 </div>
