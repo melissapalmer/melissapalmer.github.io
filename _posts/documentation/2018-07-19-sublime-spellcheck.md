@@ -18,7 +18,7 @@ Preferences --> Settings --> and add the following to Preferences.sublime-settin
 ```
 
 Save that file then spell check will be enabled you will see spelling errors underlined as below: 
-![View Sublime Spelling Error]({{ "/assets/images/sublime-spelling-error.jpg" | absolute_url }})
+![View Sublime Spelling Error](/assets/images/sublime-spelling-error.JPG)
 and be able to right click on the incorrect word to select right one. 
 
 **OR  OR  OR  OR  OR  OR**
