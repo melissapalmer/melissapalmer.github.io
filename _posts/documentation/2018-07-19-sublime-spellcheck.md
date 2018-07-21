@@ -23,6 +23,7 @@ and be able to right click on the incorrect word to select right one.
 
 **OR  OR  OR  OR  OR  OR**
  as I have just found out simply enable under: 
+ 
 View --> Spell Check
 
 
