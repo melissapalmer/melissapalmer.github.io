@@ -16,10 +16,40 @@ However, creating documentation isn't something that most developers enjoy doing
 
 [Swagger](https://swagger.io/) is one of these. Although widely used and well known, like [Andy Wilkinson](https://spring.io/team/awilkinson) explains in his [presentation](https://2015.event.springone2gx.com/schedule/sessions/documenting_restful_apis.html) at the Washington DC, at SpringOne2GX conference or how [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) details in this blog post it comes with its own pro’s and cons. Which include: 
 
-| Reason | Description |
-| ------ | ----------- |
-| "Annotation Hell"   | Swagger requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made the code very difficult to read and maintain. For example take a look at this snippet of code below: 
-| Structured in terms of URIs   | next reason description |
+- Annotation Hell
+-- Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. 
+-- For example take a look at this snippet of code below: 
+```java
+@Produces( { MediaType.APPLICATION_JSON } )
+@Path( "/{email}" )
+@GET
+@ApiOperation( 
+    value = "Find person by e-mail", 
+    notes = "Find person by e-mail", 
+    response = Person.class 
+)
+@ApiResponses( {
+    @ApiResponse( code = 404, message = "Person with such e-mail doesn't exists" )    
+} )
+public Person getPeople( 
+        @ApiParam( value = "E-Mail address to lookup for", required = true ) 
+        @PathParam( "email" ) final String email ) {
+    // ...
+}
+
+@ApiModel( value = "Person", description = "Person resource representation" )
+public class Person {
+    @ApiModelProperty( value = "Person's first name", required = true ) 
+    private String email;
+    @ApiModelProperty( value = "Person's e-mail address", required = true ) 
+    private String firstName;
+    @ApiModelProperty( value = "Person's last name", required = true ) 
+    private String lastName;
+    // ...
+}
+```
+- Structured in terms of URIs
+-- next reason description
 
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
 
