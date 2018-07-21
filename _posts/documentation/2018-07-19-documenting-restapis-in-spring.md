@@ -20,6 +20,7 @@ As such I set out to find the best way of Automatize API Documentation to make t
 | Option | Description |
 | ------ | ----------- |
 | "Annotation Hell"   | Swagger requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made the code very difficult to read and maintain. For example take a look at this snippet of code below: 
+
 ```java
 @Produces( { MediaType.APPLICATION_JSON } )
 @Path( "/{email}" )
