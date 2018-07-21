@@ -16,6 +16,11 @@ However, creating documentation isn't something that most developers enjoy doing
 
 [Swagger](https://swagger.io/) is one of these. Although widely used and well known, like [Andy Wilkinson](https://spring.io/team/awilkinson) explains in his [presentation](https://2015.event.springone2gx.com/schedule/sessions/documenting_restful_apis.html) at the Washington DC, at SpringOne2GX conference or how [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) details in this blog post it comes with its own pro’s and cons. Which include: 
 
+| Reason | Description |
+| ------ | ----------- |
+| "Annotation Hell"   | Swagger requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made the code very difficult to read and maintain. For example take a look at this snippet of code below: 
+| Structured in terms of URIs   | next reason description |
+
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
 
 The Spring Boot RestDocs page is here: [https://melissapalmer.github.io/springboot-restdoc-swagger/]
