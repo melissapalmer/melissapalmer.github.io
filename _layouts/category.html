@@ -18,7 +18,7 @@ layout: default
 {% for post in sortedcategories %}
     <ul>       
         <li><span class="post-date">
-            {% assign date_format = site.date_format.categories %}
+            {% assign date_format = site.date_format.title %}
             {{ post.date | date: date_format }} </span><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>       
     </ul>
     
