@@ -19,9 +19,13 @@ As such I set out to find the best way of Automatize API Documentation to make t
 
 | Option | Description |
 | ------ | ----------- |
-| "Annotation Hell"   | Swagger requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made the code very difficult to read and maintain. For example take a look at this snippet of code below: 
+| Annotation Hell  | Swagger requires you to add many annotations to your code base. I found that all the Swagger annotations polluted the code which made the code very difficult to read and maintain. |
+| Structured in terms of URIs   | next reason description |
 
-```java
+
+Documenting Restful APIs
+ 
+ ```java
 @Produces( { MediaType.APPLICATION_JSON } )
 @Path( "/{email}" )
 @GET
@@ -49,12 +53,7 @@ public class Person {
     private String lastName;
     // ...
 }
-``` |
-| Another reason | next reason description |
-
-
-Documenting Restful APIs
- 
+```
 
 Inspired by [Keycloak's Admin REST API](https://www.keycloak.org/docs-api/4.1/rest-api/index.html) which includes object definitions for JSON body requests of the API. I wanted to create documentation for my REST API that included: nice formatting of the models with as little extra effort above the coding as possible. As well as example request/responses and a Swagger like playground area. 
 
