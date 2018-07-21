@@ -9,14 +9,6 @@ tags:
 description: Documenting Rest APIs in Spring.
 ---
 
-Why is API documentation important 
-> APIs are only as good as their documentation. A great API can be rendered useless if people don’t know how to use it, which is why documentation can be crucial for success in the API economy. 
-
-However, creating documentation isn't something that most developers enjoy doing of have the luxury of time to include. Creating and Maintaining documentation takes effort and patience. 
-
-As such I set out to find the best way of Automatize API Documentation to make this a more manageable process. There are a number of tools and frameworks which can help: each comes with its own set of pro's and cons. 
-
-
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
 
 The Spring Boot RestDocs page is here: [https://melissapalmer.github.io/springboot-restdoc-swagger/]
