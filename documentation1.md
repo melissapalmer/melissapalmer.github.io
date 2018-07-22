@@ -1,12 +1,7 @@
 ---
-layout: post
-title:  "Documenting Rest APIs"
-date: 2018-07-19 17:45:09 -0700
-categories: documentation
-tags: 
-- Spring REST Docs
-- Swagger
-description: Documenting Rest APIs.
+layout: category
+title: Documentation
+category: documentation
 ---
 
 Why is documentation important?
