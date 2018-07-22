@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-
 {% assign trans = site.data.values[site.lan] %}
-<div class="post-content">
-	<h1>{{ page.category | capitalize }}</h1>
+<div class="well article">
+	<div class="post-content">
+		<h1>{{ page.category | capitalize }}</h1>
 
-	{% unless page.content == '' %}
-	    {{ page.content }}
-	    <hr style="border-top:1px solid #28323C;"/>
-	{% endunless %}
+		{% unless page.content == '' %}
+			<hr style="border-top:1px solid #28323C;"/>
+		    {{ page.content }}
+		    <hr style="border-top:1px solid #28323C;"/>
+		{% endunless %}
+	</div>
 </div>
 
 <!-- List out all posts in this category -->

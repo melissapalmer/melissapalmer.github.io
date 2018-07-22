@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Documentation
+title: Documentation2
 category: documentation
 ---
 
