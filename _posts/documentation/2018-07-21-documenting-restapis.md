@@ -20,6 +20,36 @@ However, creating documentation isn't something that most developers enjoy doing
 
 	Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. 
 
+	```java
+	@Produces( { MediaType.APPLICATION_JSON } )
+	@Path( "/{email}" )
+	@GET
+	@ApiOperation( 
+	    value = "Find person by e-mail", 
+	    notes = "Find person by e-mail", 
+	    response = Person.class 
+	)
+	@ApiResponses( {
+	    @ApiResponse( code = 404, message = "Person with such e-mail doesn't exists" )    
+	} )
+	public Person getPeople( 
+	        @ApiParam( value = "E-Mail address to lookup for", required = true ) 
+	        @PathParam( "email" ) final String email ) {
+	    // ...
+	}
+
+	@ApiModel( value = "Person", description = "Person resource representation" )
+	public class Person {
+	    @ApiModelProperty( value = "Person's first name", required = true ) 
+	    private String email;
+	    @ApiModelProperty( value = "Person's e-mail address", required = true ) 
+	    private String firstName;
+	    @ApiModelProperty( value = "Person's last name", required = true ) 
+	    private String lastName;
+	    // ...
+	}
+	```
+
 	![Swagger Annotations](/assets/images/documentation/SwaggerAnnotations.JPG)
 
 * Structured in terms of URIs
