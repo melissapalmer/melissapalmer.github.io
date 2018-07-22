@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<h1>{{ page.category | capitalize }}</h1>
+{% assign trans = site.data.values[site.lan] %}
+<div class="post-content">
+	<h1>{{ page.category | capitalize }}</h1>
 
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
+	{% unless page.content == '' %}
+	    {{ page.content }}
+	    <hr style="border-top:1px solid #28323C;"/>
+	{% endunless %}
+</div>
 
-{% for post in site.categories.[page.category] %}
-  <h2><a href=""></a></h2>
-  <p></p>
-{% endfor %}
-
+<!-- List out all posts in this category -->
 <div class="well article">
 {% assign sortedcategories = site.categories.[page.category] %}
 {% for post in sortedcategories %}

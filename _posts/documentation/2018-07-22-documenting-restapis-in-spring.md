@@ -6,7 +6,6 @@ categories: documentation
 tags: 
 - Spring REST Docs
 - Spring Auto REST Docs
-- Documentation
 description: Documenting Rest APIs in Spring
 ---
 
