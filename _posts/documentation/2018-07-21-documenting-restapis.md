@@ -63,7 +63,7 @@ it too also comes with its pro's and con's
 
 * __Manual documentation of request and response JSON fields__
 	
-	You to put all descriptions for attributes into the Unit Tests
+	You have to put all descriptions for attributes into the Unit Tests
 
 	```java
 	 @Test
