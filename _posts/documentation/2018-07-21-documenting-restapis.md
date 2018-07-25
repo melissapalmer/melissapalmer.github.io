@@ -57,7 +57,7 @@ As such I set out to find the best way of Automatize API Documentation to make t
 	Docs structured by URI. Force the consumers read through the URI and figure out you are talking about by themselves. 
 
 [Spring REST Docs](https://spring.io/projects/spring-restdocs) 
-> It combines hand-written documentation written with Asciidoctor and auto-generated snippets produced with Spring MVC Test. This approach frees you from the limitations of the documentation produced by tools like Swagger. It helps you to produce documentation that is accurate, concise, and well-structured. This documentation then allows your users to get the information they need with a minimum of fuss.
+> combines hand-written documentation written with Asciidoctor and auto-generated snippets produced with Spring MVC Test. This approach frees you from the limitations of the documentation produced by tools like Swagger. It helps you to produce documentation that is accurate, concise, and well-structured. This documentation then allows your users to get the information they need with a minimum of fuss.
 
 it too also comes with its pro's and con's
 
@@ -85,23 +85,23 @@ it too also comes with its pro's and con's
     }
 	```
 
-	This is not only cumbersome, but if you have a field such as accountId on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
+	This is not only cumbersome, but if you have a field such as firstName	 on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
 
 [Spring Auto REST Docs](https://github.com/ScaCap/spring-auto-restdocs)
-> is an extension to help you write even less - both code and documentation.
+> is an extension or Spring REST Docs to help you write even less - both code and documentation.
 > it's able to extract JSON field names and types from request and response classes.
 as well as recognising common bean validation annotations such as @NotNull, @Size
 and 
 > Instead of using custom annotations like Swagger or polluting tests to describe what a field represents
 they use already standard JavaDocs on fields and functions
 
-BUT ... even with the Spring REST Doc, differentiator features and Spring Auto REST Docs to generate attribute descriptions. We are still missing the "playground" area SwaggerUI supplies. 
-
-And there are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc)
+BUT ... even with the Spring REST/AutoRest Doc, differentiator's. We are still missing the "playground" area SwaggerUI supplies. 
 
 I therefore conclude that a combination of the two should actually be used, rather than assuming they compete with each other. 
 
-Although the other alternative is to do contract first design. Which I have attempted, but never quire succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
+There are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc)
+
+Although the other alternative is to do contract first design. Which I have attempted, but never quite succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
 > If you happen to do contract first, I can tell you it is not a pleasant experience to write the YAML yourself for non-trivial APIs even with the swagger editor.
 
 As an aside... in the .Net world, the is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
