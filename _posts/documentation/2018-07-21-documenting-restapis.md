@@ -14,11 +14,13 @@ Why is documentation important?
 
 However, creating documentation isn't something that most developers enjoy doing of have the luxury of time to do. Creating and Maintaining documentation takes time and effort. As such I set out to find the best way of Automatize API Documentation to make this a more manageable process. There are a number of tools and frameworks which can help: each comes with its own set of pro's and cons. 
 
-[Swagger](https://swagger.io/) is one of these. Although widely used and well known, like [Andy Wilkinson](https://spring.io/team/awilkinson) explains in his [presentation](https://2015.event.springone2gx.com/schedule/sessions/documenting_restful_apis.html) at the Washington DC, at SpringOne2GX conference or how [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) details in this blog post it comes with its own pro’s and cons. Which include: 
+???? If you happen to do contract first, I can tell you it is not a pleasant experience to write the YAML yourself for non-trivial APIs even with the swagger editor. ???
+
+[Swagger](https://swagger.io/) is one of these. Although widely used and well known, like [Andy Wilkinson](https://spring.io/team/awilkinson) explains in his [presentation](https://www.youtube.com/watch?v=k5ncCJBarRI) at the Washington DC, at SpringOne2GX conference or how [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) details in this blog post it comes with its own pro’s and cons. Which include: 
 
 * __Annotation Hell__
 
-	Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. 
+	Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. You end up having more annotations than actual code... have a look below. 
 
 	```java
 	@Produces( { MediaType.APPLICATION_JSON } )
@@ -31,7 +33,7 @@ However, creating documentation isn't something that most developers enjoy doing
 	)
 	@ApiResponses( {
 	    @ApiResponse( code = 404, message = "Person with such e-mail doesn't exists" )    
-	} )
+    } )
 	public Person getPeople( 
 	        @ApiParam( value = "E-Mail address to lookup for", required = true ) 
 	        @PathParam( "email" ) final String email ) {
@@ -50,27 +52,67 @@ However, creating documentation isn't something that most developers enjoy doing
 	}
 	```
 
-* __Structured in terms of URIs__
+* __Swagger focuses heavily on the URIs.__
 
-	next reason description
+	Docs structured by URI. Force the consumers read through the URI and figure out you are talking about by themselves. 
+
+* __???.__
+
+	Description
 
 [Spring REST Docs](https://spring.io/projects/spring-restdocs) 
+> It combines hand-written documentation written with Asciidoctor and auto-generated snippets produced with Spring MVC Test. This approach frees you from the limitations of the documentation produced by tools like Swagger. It helps you to produce documentation that is accurate, concise, and well-structured. This documentation then allows your users to get the information they need with a minimum of fuss.
 
-Cons
-* Having to put all descriptions for attributes into the Unit Tests
+it too also comes with its pro's and con's
 
-[Spring Auto REST Docs](https://dzone.com/articles/introducing-spring-auto-rest-docs)
+* __Manual documentation of request and response JSON fields__
+	
+	You to put all descriptions for attributes into the Unit Tests
 
-Still missing the "play ground area SwaggerUI supplies"
+	```java
+	 @Test
+    public void listPeople() throws Exception {
+        createSamplePerson("George", "King");
+        createSamplePerson("Mary", "Queen");
+
+        this.document.snippets(
+                responseFields(
+                        fieldWithPath("[].id").description("The persons' ID"),
+                        fieldWithPath("[].firstName").description("The persons' first name"),
+                        fieldWithPath("[].lastName").description("The persons' last name")
+                )
+        );
+
+        this.mockMvc.perform(
+                get("/people").accept(MediaType.APPLICATION_JSON)
+        ).andExpect(status().isOk());
+    }
+	```
+
+	This is not only cumbersome, but if you have a field such as accountId on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
+
+[Spring Auto REST Docs](https://github.com/ScaCap/spring-auto-restdocs)
+> is an extension to help you write even less - both code and documentation.
+> it's able to extract JSON field names and types from request and response classes.
+as well as recognising common bean validation annotations such as @NotNull, @Size
+and 
+> Instead of using custom annotations like Swagger or polluting tests to describe what a field represents
+they use already standard JavaDocs on fields and functions
+
+BUT ... even with the Spring REST Doc, differentiator features and Spring Auto REST Docs to generate attribute descriptions. We are still missing the "playground" area SwaggerUI supplies. 
+
+And there are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc)
+
+I therefore conclude that a combination of the two should actually be used, rather than assuming they compete with each other. 
+
+As an aside... in the .Net world, the is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
 
 References
 ====
-- [https://www.keycloak.org/docs-api/4.1/rest-api/index.html](https://www.keycloak.org/docs-api/4.1/rest-api/index.html)
 - [https://spring.io/projects/spring-restdocs](https://spring.io/projects/spring-restdocs) 
 - [https://dzone.com/articles/introducing-spring-auto-rest-docs](https://dzone.com/articles/introducing-spring-auto-rest-docs)
-- [http://www.baeldung.com/spring-rest-docs](http://www.baeldung.com/spring-rest-docs)
-- [https://dzone.com/articles/best-practices-in-api-documentation?fromrel=true](https://dzone.com/articles/best-practices-in-api-documentation?fromrel=true)
 - [https://blog.novatec-gmbh.de/the-problems-with-swagger/](https://blog.novatec-gmbh.de/the-problems-with-swagger/)
 - [https://dzone.com/articles/swagger-great](https://dzone.com/articles/swagger-great)
 - [https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)
 - [https://dzone.com/articles/spring-rest-docs-versus-springfox-swagger-for-api](https://dzone.com/articles/spring-rest-docs-versus-springfox-swagger-for-api)
+- [https://github.com/domaindrivendev/Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
