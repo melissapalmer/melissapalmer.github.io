@@ -95,9 +95,9 @@ and
 > Instead of using custom annotations like Swagger or polluting tests to describe what a field represents
 they use already standard JavaDocs on fields and functions
 
-BUT ... even with the Spring REST/AutoRest Doc, differentiator's. We are still missing the "playground" area SwaggerUI supplies. 
+__BUT__ ... even with the Spring REST/AutoRest Doc, differentiator's. We are still missing the "playground" area SwaggerUI supplies. 
 
-I therefore conclude that a combination of the two should actually be used, rather than assuming they compete with each other. 
+__I therefore conclude that a combination of the two should actually be used, rather than assuming they compete with each other.__
 
 There are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc)
 
