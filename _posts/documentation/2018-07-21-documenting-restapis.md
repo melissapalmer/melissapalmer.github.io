@@ -99,12 +99,13 @@ __BUT__ ... even with the Spring REST/AutoRest Doc, differentiator's. We are sti
 
 __I therefore conclude that a combination of the two should actually be used, rather than assuming they compete with each other.__
 
-There are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc)
-
-Although the other alternative is to do contract first design. Which I have attempted, but never quite succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
+Further thoughts
+- There are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc) neither are fully fledged and don't pick up all JavaDoc yet. 
+- Although the other alternative is to do contract first design. Which I have attempted, but never quite succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
 > If you happen to do contract first, I can tell you it is not a pleasant experience to write the YAML yourself for non-trivial APIs even with the swagger editor.
 
-As an aside... in the .Net world, the is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
+As an aside... 
+- in the .Net world, the is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
 
 References
 ====
