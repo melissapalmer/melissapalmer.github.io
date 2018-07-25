@@ -16,7 +16,7 @@ However, creating documentation isn't something that most developers enjoy doing
 
 [Swagger](https://swagger.io/) is one of these. Although widely used and well known, like [Andy Wilkinson](https://spring.io/team/awilkinson) explains in his [presentation](https://2015.event.springone2gx.com/schedule/sessions/documenting_restful_apis.html) at the Washington DC, at SpringOne2GX conference or how [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) details in this blog post it comes with its own pro’s and cons. Which include: 
 
-* Annotation Hell
+* __Annotation Hell__
 
 	Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. 
 
@@ -50,9 +50,7 @@ However, creating documentation isn't something that most developers enjoy doing
 	}
 	```
 
-	![Swagger Annotations](/assets/images/documentation/SwaggerAnnotations.JPG)
-
-* Structured in terms of URIs
+* __Structured in terms of URIs__
 
 	next reason description
 
@@ -75,3 +73,4 @@ References
 - [https://blog.novatec-gmbh.de/the-problems-with-swagger/](https://blog.novatec-gmbh.de/the-problems-with-swagger/)
 - [https://dzone.com/articles/swagger-great](https://dzone.com/articles/swagger-great)
 - [https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/](https://springframework.guru/spring-boot-restful-api-documentation-with-swagger-2/)
+- [https://dzone.com/articles/spring-rest-docs-versus-springfox-swagger-for-api](https://dzone.com/articles/spring-rest-docs-versus-springfox-swagger-for-api)
