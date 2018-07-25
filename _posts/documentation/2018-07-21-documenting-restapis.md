@@ -101,7 +101,7 @@ __I therefore conclude that a combination of the two should actually be used, ra
 
 Further thoughts
 - There are now extensions to Swagger/SwaggerUI that also read comments from the JavaDoc rather than the special annotations such as [swagger-doclet](https://github.com/conorroche/swagger-doclet) and [springfox-javadoc](https://github.com/springfox/springfox-javadoc) neither are fully fledged and don't pick up all JavaDoc yet. 
-- Although the other alternative is to do contract first design. Which I have attempted, but never quite succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
+- The other alternative is to do contract first design. Which I have attempted, but never quite succeeded. I assume this is because like [Carlos Barragan](https://blog.novatec-gmbh.de/the-problems-with-swagger/) says :
 > If you happen to do contract first, I can tell you it is not a pleasant experience to write the YAML yourself for non-trivial APIs even with the swagger editor.
 
 As an aside... 
