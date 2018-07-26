@@ -6,7 +6,6 @@ categories: documentation
 tags: 
 - Swagger Codegen
 - Maven
-- Spring Boot
 description: Swagger Codegen 2 Java Classes with Maven
 ---
 
