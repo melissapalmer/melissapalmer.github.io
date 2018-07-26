@@ -105,7 +105,7 @@ Further thoughts
 > If you happen to do contract first, I can tell you it is not a pleasant experience to write the YAML yourself for non-trivial APIs even with the swagger editor.
 
 As an aside... 
-- in the .Net world, the is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
+- in the .Net world, there is [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle) for SwaggerUI and swagger.json generation. Which allows you to include "XML Comments", which is the equivalent of JavaDoc, so they don't seem to have this issue for attribute descriptions.
 
 References
 ====
