@@ -31,7 +31,7 @@ The Vagrantfile is the starting point. It's usually used to create VMs in Virtua
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
  
 Vagrant.configure("2") do |config|
- 
+
 	config.vm.define "docker-4-unix-on-windows" do |m|	 
 		m.vm.provision :shell, inline: "sudo apt-get update"
 
@@ -123,11 +123,11 @@ vagrant up
 vagrant docker-logs
 vagrant global-status
 
->Note that all vagrant commands by default act on the Docker container – listed here as default. Vagrant destroy, halt, up etc. all act on that container and not on the dockerhostvm  Virtual Box VM. If you want vagrant to act on that machine, the commands need to make use of the id of the VM – for example vagrant halt <machine id>.
+>Note that all vagrant commands by default act on the Docker container listed here as default. Vagrant destroy, halt, up etc. all act on that container and not on the dockerhostvm  Virtual Box VM. If you want vagrant to act on that machine, the commands need to make use of the id of the VM – for example vagrant halt <machine id>.
 
 **Docker Commands**
 docker ps -a 
-docker inspect -f ‘{{ .NetworkSettings.IPAddress }}’ <container id>
+docker inspect -f {{ .NetworkSettings.IPAddress }} <container id>
 
 Code for this example is on [GIT](https://www.sitepoint.com/getting-started-vagrant-windows/)
 
