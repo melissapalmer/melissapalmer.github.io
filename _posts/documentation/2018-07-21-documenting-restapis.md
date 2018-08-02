@@ -65,25 +65,25 @@ it too also comes with its pro's and con's
 	
 	You have to put all descriptions for attributes into the Unit Tests
 
-	{% highlight java %}
-	 @Test
-    public void listPeople() throws Exception {
-        createSamplePerson("George", "King");
-        createSamplePerson("Mary", "Queen");
+{% highlight java %}
+@Test
+public void listPeople() throws Exception {
+    createSamplePerson("George", "King");
+    createSamplePerson("Mary", "Queen");
 
-        this.document.snippets(
-                responseFields(
-                        fieldWithPath("[].id").description("The persons' ID"),
-                        fieldWithPath("[].firstName").description("The persons' first name"),
-                        fieldWithPath("[].lastName").description("The persons' last name")
-                )
-        );
+    this.document.snippets(
+            responseFields(
+                    fieldWithPath("[].id").description("The persons' ID"),
+                    fieldWithPath("[].firstName").description("The persons' first name"),
+                    fieldWithPath("[].lastName").description("The persons' last name")
+            )
+    );
 
-        this.mockMvc.perform(
-                get("/people").accept(MediaType.APPLICATION_JSON)
-        ).andExpect(status().isOk());
-    }
-	{% endhighlight %}
+    this.mockMvc.perform(
+            get("/people").accept(MediaType.APPLICATION_JSON)
+    ).andExpect(status().isOk());
+}
+{% endhighlight %}
 
 	This is not only cumbersome, but if you have a field such as firstName	 on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
 
