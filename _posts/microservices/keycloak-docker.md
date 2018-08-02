@@ -7,7 +7,7 @@ tags:
 - Swagger
 - Spring Boot
 description: swagger.json with Spring Boot
-published: true
+published: false
 ---
 
 https://hub.docker.com/r/jboss/keycloak/

@@ -7,7 +7,7 @@ tags:
 - Swagger
 - Spring Boot
 description: swagger.json with Spring Boot
-published: true
+published: false
 ---
 
 http://swagger2markup.github.io/spring-swagger2markup-demo/1.1.0/
