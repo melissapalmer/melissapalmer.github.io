@@ -22,7 +22,7 @@ As such I set out to find the best way of Automatize API Documentation to make t
 
 	Swagger requires you to add many annotations to your code base. These Swagger annotations pollute the code and make it very difficult to read and maintain. You end up having more annotations than actual code... have a look below. 
 
-{% highlight java linenos %}
+{% highlight java %}
 @Produces( { MediaType.APPLICATION_JSON } )
 @Path( "/{email}" )
 @GET
@@ -65,7 +65,7 @@ it too also comes with its pro's and con's
 	
 	You have to put all descriptions for attributes into the Unit Tests
 
-	```java
+	{% highlight java %}
 	 @Test
     public void listPeople() throws Exception {
         createSamplePerson("George", "King");
@@ -83,7 +83,7 @@ it too also comes with its pro's and con's
                 get("/people").accept(MediaType.APPLICATION_JSON)
         ).andExpect(status().isOk());
     }
-	```
+	{% endhighlight %}
 
 	This is not only cumbersome, but if you have a field such as firstName	 on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
 
