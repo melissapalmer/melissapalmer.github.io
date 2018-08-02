@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pa-sing swagger.json with Swagger Parser"
+title:  "Parsing swagger.json with Swagger Parser"
 date: 2018-07-02 17:45:09 -0700
 categories: documentation
 tags: 
