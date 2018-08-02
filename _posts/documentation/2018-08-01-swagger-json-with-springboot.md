@@ -7,7 +7,7 @@ tags:
 - Swagger
 - Spring Boot
 description: swagger.json with Spring Boot
-published: true
+published: false
 ---
 
 One of the most popular API documentation specifications is OpenApi, formerly known as Swagger. It allows you to describe your API's properties using either JSON or YAML metadata. 
