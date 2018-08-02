@@ -6,6 +6,7 @@ body {
     background-image: url(/jekyll-xixia/assets/images/canvas_bg.jpg);
     padding-top: 60px;
     height:100%;
+    line-height: 1.1;
 }
 
 .wrap {
@@ -41,7 +42,6 @@ body {
 .sidebar {
     color: $side-bar-color;
     background-color: $side-bar-background-color;
-    font-size: 1.1em;
 }
 
 .sidebar h1 {
@@ -50,6 +50,7 @@ body {
 
 .sidebar a {
     color: $side-bar-a-color;
+    font-size: 12px;
 }
 
 .sidebar li {
@@ -74,8 +75,9 @@ body {
 
 /* post style */
 .article {
-    font-size: 17px;
+    font-size: 15px;
     color: $article-color;
+    font-family: "Cambria", "Georgia", serif;
 }
 
 .article img {
@@ -152,4 +154,16 @@ body {
 }
 .navbar-custom .icon-home {
     font-size: 23px;
+}
+
+.h1, h1 {
+    font-size: 25px;
+}
+
+.h2, h2 {
+	 font-size: 25px;
+}
+
+.ul {
+    -webkit-padding-start: 10px;
 }
