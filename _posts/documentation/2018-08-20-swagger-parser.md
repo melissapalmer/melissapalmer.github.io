@@ -9,36 +9,35 @@ tags:
 description: Parsing swagger.json with Swagger Parser
 ---
 
-I wanted to see if we can get all the Endpoints with HttpMethods for a Swagger Spec from the swagger.json.  
+*I wanted to see if we can get all the Endpoints with HttpMethods for a Swagger Spec from the swagger.json.*  
 
 [Swagger Parser](https://github.com/swagger-api/swagger-parser) provides a way of reading a swagger.json file into Java POJOs.
 
 You need to include the depenceny in your pom.xml as follows
 ```xml
-    <dependency>
-	    <groupId>io.swagger.parser.v3</groupId>
-	    <artifactId>swagger-parser</artifactId>
-	    <version>2.0.1</version>
-	</dependency>
+<dependency>
+    <groupId>io.swagger.parser.v3</groupId>
+    <artifactId>swagger-parser</artifactId>
+    <version>2.0.1</version>
+</dependency>
 ```
 
 And then you can parse the file using: 
 ```java
-
-	String swaggerAsString = ClasspathHelper.loadFileFromClasspath("petstore-swagger.json"); //where petstore-swagger.json is in your class path
-	Swagger swagger = new SwaggerParser().parse(swaggerAsString);
+String swaggerAsString = ClasspathHelper.loadFileFromClasspath("petstore-swagger.json"); //where petstore-swagger.json is in your class path
+Swagger swagger = new SwaggerParser().parse(swaggerAsString);
 ```
 
 To get all endpoints:
 ```java
-	Map<String, Path> paths = swagger.getPaths();
-	Set<String> endpoints = paths.keySet();
+Map<String, Path> paths = swagger.getPaths();
+Set<String> endpoints = paths.keySet();
 ```
 
 and the a available HttpMethods on these endpoints:
 ```java
-	Map<HttpMethod, Operation> operationMap = path.getOperationMap();
-	Set<HttpMethod> operationsKeySet = operationMap.keySet();
+Map<HttpMethod, Operation> operationMap = path.getOperationMap();
+Set<HttpMethod> operationsKeySet = operationMap.keySet();
 ```
 
 Code can be found on [GIT](https://github.com/melissapalmer/swagger-parser-java)
