@@ -96,7 +96,7 @@ And the command to get everything running is then
 `vagrant up`
 this will start provisioning, based on the Vagrantfile. Vagrant will realize that we asking for a Docker provider and that we on Windows which does not support Docker. Therefore, a Docker enabled host VM is required. Vagrant will then use the DockerHostVagrantfile because of the line `d.vagrant_vagrantfile = "./DockerHostVagrantfile"` to spin up a new VM in Virtualbox (as this file used `config.vm.provider :virtualbox`) and proceed to install Docker onto it. Vagrant will then build and run the Docker image as a container from the Dockerfile in same location. 
 
-The line `d.cmd = ["ping", "-c 5151", "127.0.0.1"]` in the Vagrantfile – tells the Docker container what to execute as soon as it is running. This is the same as the CMD within a normal Dockerfile. You can see the output from the container on the Windows host using the command `vagrant docker-logs`, or using Putty to SSH to onto the VM and running standard docker commands such as `docker logs <container-id>`.
+The line `d.cmd = ["ping", "-c 5151", "127.0.0.1"]` in the Vagrantfile tells the Docker container what to execute as soon as it is running. This is the same as the CMD within a normal Dockerfile. You can see the output from the container on the Windows host using the command `vagrant docker-logs`, or using Putty to SSH to onto the VM and running standard docker commands such as `docker logs <container-id>`.
 
 To get the detail on VM to SSH to you can run `vagrant ssh-config` which will give you info. such as:
 {% highlight %}
@@ -123,7 +123,7 @@ vagrant up
 vagrant docker-logs
 vagrant global-status
 
->Note that all vagrant commands by default act on the Docker container listed here as default. Vagrant destroy, halt, up etc. all act on that container and not on the dockerhostvm  Virtual Box VM. If you want vagrant to act on that machine, the commands need to make use of the id of the VM – for example vagrant halt <machine id>.
+>Note that all vagrant commands by default act on the Docker container listed here as default. Vagrant destroy, halt, up etc. all act on that container and not on the dockerhostvm  Virtual Box VM. If you want vagrant to act on that machine, the commands need to make use of the id of the VM for example vagrant halt <machine id>.
 
 **Docker Commands**
 docker ps -a 
