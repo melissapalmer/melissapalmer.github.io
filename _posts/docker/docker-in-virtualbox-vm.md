@@ -10,6 +10,12 @@ description: Docker on Virtualbox VM
 published: false
 ---
 
+Vagrant behaves just like any other provider
+Use a VM to install Docker on and act as your Docker Host. 
+
+Vagrant will detect that Windows cannot run Linux containers natively and will
+>automatically spins up a "host VM" to run Docker. 
+
 Check that docker is installed and running
 - sudo systemctl status docker
 
