@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parsing swagger.json with Swagger Parser"
-date: 2018-07-02 17:45:09 -0700
+date: 2018-08-02 17:45:09 -0700
 categories: documentation
 tags: 
 - Swagger Parser
