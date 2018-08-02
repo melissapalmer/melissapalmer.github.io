@@ -85,6 +85,7 @@ public void listPeople() throws Exception {
 }
 {% endhighlight %}
 
+
 	This is not only cumbersome, but if you have a field such as firstName	 on more than one endpoint. You end up having different explanations in the docs for this, and they become very inconsistent. And again now this code pollutes the unit test code being written. 
 
 [Spring Auto REST Docs](https://github.com/ScaCap/spring-auto-restdocs)
