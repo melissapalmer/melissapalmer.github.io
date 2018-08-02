@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Parsing swagger.json with Swagger Parser"
+title:  "Parse swagger.json to Java"
 date: 2018-08-02 17:45:09 -0700
 categories: documentation
 tags: 
 - Swagger Parser
 - Swagger
-description: Parsing swagger.json with Swagger Parser
+description: Parse swagger.json to Java
 ---
 
 *I wanted to see if we can get all the Endpoints with HttpMethods for a Swagger Spec from the swagger.json.*  
