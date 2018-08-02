@@ -14,9 +14,9 @@ baseurl: ''
 ## default date_format
 date_format: 
   title: "%d-%B-%Y"
-  archive: "%b"
-  categories: "%b-%Y"
-  tag: "%b-%Y"
+  archive: "%d-%B-%Y"
+  categories: "%d-%B-%Y"
+  tag: "%d-%B-%Y"
 # Language
 lan: "en" 
 
