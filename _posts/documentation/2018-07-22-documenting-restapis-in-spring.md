@@ -7,6 +7,7 @@ tags:
 - Spring REST Docs
 - Spring Auto REST Docs
 description: Documenting Rest APIs in Spring
+published: false
 ---
 
 My project to experiment with is at: https://github.com/melissapalmer/springboot-restdoc-swagger
