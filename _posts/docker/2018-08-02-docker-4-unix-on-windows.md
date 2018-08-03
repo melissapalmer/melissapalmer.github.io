@@ -94,7 +94,7 @@ RUN mkdir /u01 && \
 COPY /files/readme.txt /u01/
 ```
 
-#The command to get everything running is then 
+# The command to get everything running is then 
 
 `vagrant up`
 this will start provisioning, based on the Vagrantfile. Vagrant will realize that we asking for a Docker provider and that we on Windows which does not support Docker. Therefore, a Docker enabled host VM is required. Vagrant will then use the DockerHostVagrantfile because of the line `d.vagrant_vagrantfile = "./DockerHostVagrantfile"` to spin up a new VM in Virtualbox (as this file used `config.vm.provider :virtualbox`) and proceed to install Docker onto it. Vagrant will then build and run the Docker image as a container from the Dockerfile in same location. 
