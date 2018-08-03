@@ -27,7 +27,7 @@ All of these install like any other windows program.
 
 The Vagrantfile is the starting point. It's usually used to create VMs in VirtualBox, VMWare etc. buy using a different provider. You can now use the docker provider, Vagrant will spin up Docker containers rather than VMs for this provider. An example Vagrantfile looks as follows: 
 
-{% highlight %}
+```
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'docker'
  
 Vagrant.configure("2") do |config|
@@ -53,11 +53,11 @@ Vagrant.configure("2") do |config|
 		end
 	end
 end
-{% endhighlight %}
+```
 
 Within the DockerHostVagrantfile you can specify the settings for you Host VM like any other Vagrantfile, as follows: 
 
-{% highlight %}
+```
 Vagrant.configure("2") do |config|
   
   config.vm.provision "docker"
@@ -81,16 +81,17 @@ Vagrant.configure("2") do |config|
       #vb.customize ["modifyvm", :id, "--cpus", "2"]
   end
 end
-{% endhighlight %}
+```
 
 And the Dockerfile is standard e.g.: 
-{% highlight %}
+
+```
 FROM ubuntu:14.04
  
 RUN mkdir /u01 && \
 	chmod a+xr /u01
 COPY /files/readme.txt /u01/
-{% endhighlight %}
+```
 
 And the command to get everything running is then 
 `vagrant up`
@@ -99,7 +100,8 @@ this will start provisioning, based on the Vagrantfile. Vagrant will realize tha
 The line `d.cmd = ["ping", "-c 5151", "127.0.0.1"]` in the Vagrantfile tells the Docker container what to execute as soon as it is running. This is the same as the CMD within a normal Dockerfile. You can see the output from the container on the Windows host using the command `vagrant docker-logs`, or using Putty to SSH to onto the VM and running standard docker commands such as `docker logs <container-id>`.
 
 To get the detail on VM to SSH to you can run `vagrant ssh-config` which will give you info. such as:
-{% highlight %}
+
+```
 C:\work\projects\Learning\docker>vagrant ssh-config
 Host docker-4-unix-on-windows
   HostName 127.0.0.1
@@ -112,7 +114,7 @@ Host docker-4-unix-on-windows
   IdentitiesOnly yes
   LogLevel FATAL
 C:\work\projects\Learning\docker>
-{% endhighlight %}
+```
 
 Here you can see the IP to use in Putty is 127.0.0.1 and Port 2222
 
