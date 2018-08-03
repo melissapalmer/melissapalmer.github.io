@@ -71,3 +71,12 @@ pre.highlight,
 .highlight .vg { color: #F1F2F3 } /* Name.Variable.Global */
 .highlight .vi { color: #F1F2F3 } /* Name.Variable.Instance */
 .highlight .il { color: #FFCD22 } /* Literal.Number.Integer.Long */
+
+.code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: black;
+    font-style: italic;
+    background-color: #b5c8c7;
+    border-radius: 4px;
+}
