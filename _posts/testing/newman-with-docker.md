@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Docker for Unix on Windows with Vagrant"
+title: "Postman Newman with Vagrant,Docker,Windows"
 date: 2018-08-04 17:45:09 -0700
 categories: testing
 tags: 
 - Postman
 - Docker
-description: Docker for Unix on Windows with Vagrant
+- Vagrant
+description: Postman Newman with Vagrant,Docker,Windows
 published: true
 ---
 
@@ -19,7 +20,6 @@ docker run --name=postman-newman -v "$(pwd)":/etc/postman-newman postman/newman_
 docker run --name=postman-newman -v "$(pwd)":/etc/postman-newman postman/newman_ubuntu1404 run /etc/postman-newman/GOOGLE.postman_collection.json --environment=/etc/postman-newman/GOOGLE_ENV.postman_environment.json
 
 docker run --name=postman-newman -v "$(pwd)":/etc/postman-newman postman/newman_ubuntu1404 run /etc/postman-newman/GOOGLE.postman_collection.json --environment=/etc/postman-newman/GOOGLE_ENV.postman_environment.json --reporters cli,html --reporter-html-export /etc/postman-newman/outputfile.html
-newman
 
 
 
@@ -67,7 +67,7 @@ https://github.com/postmanlabs/newman/tree/develop/docker
 https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker
 
 
-
+https://blog.trifork.com/2014/07/20/how-to-manage-your-docker-runtime-config-with-vagrant/
 
 
 https://www.getpostman.com/docs/v6/api_testing_and_collection_runner/newman_intro
