@@ -44,8 +44,7 @@ to verify the box has been added
 You need to login to AWS account and gets some information 
 https://console.aws.amazon.com/iam/home#security_credential
 
-Access Key ID:		AKIAIK2JIHGBSH3LTVMA
-Secret Access Key:	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
+
 
 `vagrant up --provider=aws`
 
