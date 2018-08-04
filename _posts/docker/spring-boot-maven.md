@@ -1,3 +1,15 @@
+
+
+
+https://blog.frankel.ch/dockerfile-maven-based-github-projects/
+https://medium.com/@nieldw/caching-maven-dependencies-in-a-docker-build-dca6ca7ad612
+https://blog.giantswarm.io/getting-started-with-java-development-on-docker/
+http://blog.flurdy.com/2014/11/dont-download-internet-share-maven-ivy-docker.html
+https://dzone.com/articles/a-dockerfile-for-maven-based-github-projects
+https://github.com/GrindrodBank/tilkynna/blob/feature/add-docker-build-run/Dockerfile
+
+
+
 https://blog.frankel.ch/dockerfile-maven-based-github-projects/
 https://medium.com/@nieldw/caching-maven-dependencies-in-a-docker-build-dca6ca7ad612
 https://blog.giantswarm.io/getting-started-with-java-development-on-docker/
