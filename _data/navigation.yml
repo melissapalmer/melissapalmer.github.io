@@ -1,18 +1,18 @@
+- title: Documentation
+  url: /documentation.html
+- title: DevOps
+  url: /devops.html
 - title: About
   url: /about.html
-- title: Team
-  url: /team.html
-- title: Contact
-  url: /contact.html
-- title: Store
-  url: /store.html
-- title: Support
-  url: /support.html
+#- title: Store
+#  url: /store.html
+- title: Development
+  url: /developement.html
   sublinks:
-    - title: FAQ
-      url: /faq.html
-    - title: Documentation
-      url: /documentation.html
+    - title: Java
+      url: /java.html
+    - title: .Net
+      url: /dot-net.html
     - title: separator
-    - title: Customer Support
+    - title: Go
       url: /customer-support.html
