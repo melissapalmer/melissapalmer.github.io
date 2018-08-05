@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Swagger Codegen 2 Java Classes with Maven"
 date: 2018-07-26 17:45:09 -0700
 categories: documentation

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Parse swagger.json to Java"
 date: 2018-08-02 17:45:09 -0700
 categories: documentation
