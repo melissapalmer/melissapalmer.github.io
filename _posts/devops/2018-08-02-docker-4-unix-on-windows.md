@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Docker for Unix on Windows with Vagrant"
 date: 2018-08-02 17:45:09 -0700
-categories: docker
+categories: devops
 tags: 
 - Vagrant
 - Docker

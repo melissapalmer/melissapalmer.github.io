@@ -2,7 +2,7 @@
 layout: post
 title: "Vagrant AWS"
 date: 2018-08-02 17:45:09 -0700
-categories: docker
+categories: devops
 tags: 
 - Vagrant
 - AWS

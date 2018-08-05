@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Docker on Virtualbox VM"
 date: 2018-07-19 17:45:09 -0700
-categories: docker
+categories: devops
 tags: 
 - Docker
 - Virtualbox
