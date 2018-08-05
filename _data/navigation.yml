@@ -4,15 +4,13 @@
   url: /devops.html
 - title: About
   url: /about.html
-#- title: Store
-#  url: /store.html
-- title: Development
-  url: /developement.html
-  sublinks:
-    - title: Java
-      url: /java.html
-    - title: .Net
-      url: /dot-net.html
-    - title: separator
-    - title: Go
-      url: /customer-support.html
+#- title: Development
+#  url: /developement.html
+#  sublinks:
+#    - title: Java
+#      url: /java.html
+#    - title: .Net
+#      url: /dot-net.html
+#    - title: separator
+#    - title: Go
+#      url: /customer-support.html
