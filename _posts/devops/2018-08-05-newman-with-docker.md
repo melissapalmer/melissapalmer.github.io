@@ -19,8 +19,10 @@ There are allot of tutorials out there explain how to use Newman & Jenkins. The 
 # Newman has its own Docker Image
 more details on that at: [https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker](https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker)
 
-Using this Docker image its as simple as running the a command like 
+Using this Docker image its as simple as running the a command like
+
 `docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` 
+
 to run your Postman Test Scripts. 
 
 # I wanted to see if we can take advantage of Newman's Docker Image 
