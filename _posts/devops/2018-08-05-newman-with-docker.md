@@ -105,6 +105,17 @@ end
 -- allow with each of the matching report export parameters such as `--reporter-html-export` which is used to specify where the output of html report will be saved.
 -- allow with each of the matching report export parameters such as `--reporter-junit-export` which is used to specify where the output of xml report will be saved.  
 
+#Once all the above is setup 
+
+... all that is left to do is run the command 
+`vagrant up`
+This will run your docker run command on VM host, command that gets run is: 
+`docker run -t postman/newman_ubuntu1404 /vagrant/newman-with-docker-on-windows/GOOGLE.postman_collection.json --environment=/vagrant/newman-with-docker-on-windows/GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export /vagrant/newman-with-docker-on-windows/newman-report.xml --reporter-html-export /vagrant/newman-with-docker-on-windows/outputfile.html`
+
+which will run the postman collection GOOGLE.postman_collection.json using environment variables in GOOGLE_ENV.postman_environment.json and output the results to the command line, as well as to an html file and xml file under `/vagrant/newman-with-docker-on-windows/` folder. Which we will be able to see on our Windows machine as its been synced with Docker via volumns and Vagrant via synced folders. 
+
+The code for this can be found on [GIT](https://github.com/melissapalmer/newman-with-docker-on-windows)
+
 References
 ===
 
