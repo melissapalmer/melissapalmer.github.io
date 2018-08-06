@@ -12,16 +12,14 @@ description: Newman with Docker from Windows with Vagrant
 published: true
 ---
 
-# Automating testing.... 
-is a big goal for allot for teams... but how do we take advantage existing tool set being used to do this. 
-For RESTFul API tests there is [Postman](https://www.getpostman.com/) which is a popular API client for interacting with RESTFull APIs. Postman also includes the ability to create test suites and run these from its UI. Postman also has its own CLI ... [Newman](https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman) that allows for running of a Postman collection (test suites) from the command line. 
+[Postman](https://www.getpostman.com/) which is a popular API client for interacting with RESTFull APIs. Postman also includes the ability to create test suites and run these from its UI. Postman also has its own CLI ... [Newman](https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman) that allows for running of a Postman collection (test suites) from the command line. 
+
+There are allot of tutorials out there explain how to use Newman & Jenkins. The thing is that all of these examples require you to have a Jenkins master/slave that has Node.js installed along with the Newman npm package. 
 
 # Newman also has its own Docker Image
 more details on that at: [https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker](https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker)
 
-Using this Docker image its as simple as running the a command like `docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` to run through your Postman Test Scripts. 
-
-There are allot of tutorials out there explain how to use Newman & Jenkins. The thing is that all of these examples require you to have a Jenkins master/slave that has Node.js installed along with the Newman npm package. 
+Using this Docker image its as simple as running the a command like `docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` to run your Postman Test Scripts. 
 
 I wanted to see if we can take advantage of Newman's Docker Image to do the same thing as all these tutorials BUT avoid having to install Node.js or Newman on a Jenkins master/slave. So to get started, I want to use Newman Docker Image without Jenkins. (I'll add the Jenkins steps in a later post, but I'm sure that'll end up being a simple step along the lines of what is usually done for Newman/Jenkins integration.)
 
@@ -33,8 +31,8 @@ I'm assuming that those reading this are familiar with [Docker](https://www.dock
 - [https://www.vagrantup.com/intro/index.html](https://www.vagrantup.com/intro/index.html) 
 - and other posts on my own site at: [https://melissapalmer.github.io/devops.html](https://melissapalmer.github.io/devops.html)
 
-# From Windows
-You can use Vagrant to spin up a VM with Docker installed, and execute the docker run commands against it. With Vagrant when you specify the provision'er as docker and vagrant_vagrantfile, Vagrant ensures there is a Host VM with Docker installed. Follow my basic example of how to run Vagrant, VirtualBox, Docker from Windows at [https://melissapalmer.github.io/devops/2018/08/03/docker-4-unix-on-windows.html](https://melissapalmer.github.io/devops/2018/08/03/docker-4-unix-on-windows.html) 
+# On Windows
+You can use Vagrant to spin up a VM with Docker installed, and execute the docker run commands against it. With Vagrant when you specify the provision'er as docker and vagrant_vagrantfile, Vagrant ensures there is a Host VM with Docker installed. In the post at [Docker for Unix on Windows with Vagrant](https://melissapalmer.github.io/devops/2018/08/03/docker-4-unix-on-windows.html), I explain a basic example of how to run Vagrant, VirtualBox, Docker on Windows.
 
 The above post explains how to use your own Dockerfile to build and run and image. To use an image that is already packaged you just need to pull the image and then run it. 
 
