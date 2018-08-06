@@ -16,12 +16,15 @@ published: true
 
 There are allot of tutorials out there explain how to use Newman & Jenkins. The thing is that all of these examples require you to have a Jenkins master/slave that has Node.js installed along with the Newman npm package. 
 
-# Newman also has its own Docker Image
+# Newman has its own Docker Image
 more details on that at: [https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker](https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker)
 
-Using this Docker image its as simple as running the a command like `docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` to run your Postman Test Scripts. 
+Using this Docker image its as simple as running the a command like 
+`docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` 
+to run your Postman Test Scripts. 
 
-I wanted to see if we can take advantage of Newman's Docker Image to do the same thing as all these tutorials BUT avoid having to install Node.js or Newman on a Jenkins master/slave. So to get started, I want to use Newman Docker Image without Jenkins. (I'll add the Jenkins steps in a later post, but I'm sure that'll end up being a simple step along the lines of what is usually done for Newman/Jenkins integration.)
+# I wanted to see if we can take advantage of Newman's Docker Image 
+to do the same thing as all these tutorials BUT avoid having to install Node.js or Newman on a Jenkins master/slave. To get started, I'll just use the Newman Docker Image without Jenkins. 
 
 I work on a Windows PC... so here I explain how to use Windows 10, Vagrant to run a Postman collection with Newman in a Docker container. The Vagrant steps are not needed, but help me to spin up a Linux VM with Docker installed, that I can work against to run Newman Docker Image. 
 
@@ -33,8 +36,6 @@ I'm assuming that those reading this are familiar with [Docker](https://www.dock
 
 # On Windows
 You can use Vagrant to spin up a VM with Docker installed, and execute the docker run commands against it. With Vagrant when you specify the provision'er as docker and vagrant_vagrantfile, Vagrant ensures there is a Host VM with Docker installed. In the post at [Docker for Unix on Windows with Vagrant](https://melissapalmer.github.io/devops/2018/08/03/docker-4-unix-on-windows.html), I explain a basic example of how to run Vagrant, VirtualBox, Docker on Windows.
-
-The above post explains how to use your own Dockerfile to build and run and image. To use an image that is already packaged you just need to pull the image and then run it. 
 
 # The Vagrantfile will look as below:
 
@@ -100,8 +101,8 @@ end
 - `d.volumes` to map the sync drives from your VM Docker Host (which was created by DockerHostVagrantfile specified by `d.vagrant_vagrantfile`)
 
 - *NOTE:* be careful with the Vagrant's 'synced_folder' and Docker volumes. 
--- Firstly in the DockerHostVagrantfile with line `config.vm.synced_folder ".", "/home/vagrant/src"` you are sync'ing you files from Windows PC to the Linux VM being span up that'll have Docker installed for you (i.e.: dockerhostvm) 
--- Then in the Vagrantfile the `d.volumes` is to map folders from the Linux VM (dockerhostvm) to Docker Container, so that the container can see files on your Linux VM which have been synced with Windows PC. 
+	-- Firstly in the DockerHostVagrantfile with line `config.vm.synced_folder ".", "/home/vagrant/src"` you are sync'ing you files from Windows PC to the Linux VM being span up that'll have Docker installed for you (i.e.: dockerhostvm) 
+	-- Then in the Vagrantfile the `d.volumes` is to map folders from the Linux VM (dockerhostvm) to Docker Container, so that the container can see files on your Linux VM which have been synced with Windows PC. 
 (I did have couple of issues working with these two. Have not finalised what is the 'correct way' and have an outstanding question at: [https://stackoverflow.com/questions/51696559/right-way-to-use-vagrant-vagrant-vagrantfile-synced-folder-to-docker-volumes](https://stackoverflow.com/questions/51696559/right-way-to-use-vagrant-vagrant-vagrantfile-synced-folder-to-docker-volumes))
 
 ## d.cmd Newman commands that we'll use include: 
@@ -111,14 +112,17 @@ end
 -- allow with each of the matching report export parameters such as `--reporter-html-export` which is used to specify where the output of html report will be saved.
 -- allow with each of the matching report export parameters such as `--reporter-junit-export` which is used to specify where the output of xml report will be saved.  
 
-#Once all the above is setup 
+# Once all the above is setup 
 
 ... all that is left to do is run the command 
+
 `vagrant up`
+
 This will run your docker run command on VM host, command that gets run is: 
+
 `docker run -t postman/newman_ubuntu1404 /vagrant/newman-with-docker-on-windows/GOOGLE.postman_collection.json --environment=/vagrant/newman-with-docker-on-windows/GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export /vagrant/newman-with-docker-on-windows/newman-report.xml --reporter-html-export /vagrant/newman-with-docker-on-windows/outputfile.html`
 
-which will run the postman collection GOOGLE.postman_collection.json using environment variables in GOOGLE_ENV.postman_environment.json and output the results to the command line, as well as to an html file and xml file under `/vagrant/newman-with-docker-on-windows/` folder. Which we will be able to see on our Windows machine as its been synced with Docker via volumns and Vagrant via synced folders. 
+which will run the postman collection GOOGLE.postman_collection.json using environment variables in GOOGLE_ENV.postman_environment.json and output the results to the command line, as well as to an html file and xml file under /vagrant/newman-with-docker-on-windows/ folder. Which we will be able to see on our Windows machine as its been synced with Docker via volumns and Vagrant via synced folders. 
 
 The code for this can be found on [GIT](https://github.com/melissapalmer/newman-with-docker-on-windows)
 
