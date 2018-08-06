@@ -2,5 +2,3 @@ language: ruby
 rvm:
 - 2.1
 script: "bundle exec jekyll build"
-
-cache: bundler # caching bundler gem packages will speed up build
