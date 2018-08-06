@@ -33,9 +33,8 @@
 <div class="sidebar well">
     <h1>{{ trans.recent_posts }}</h1>
     <ul>
-    	{% assign sortedposts = site.posts | sort: 'date' | reversed %}
-       
-        {% for post in paginator.posts limit:5 %}
+    	{% assign sortedposts = (site.posts | sort: 'date')  %}
+        {% for post in sortedposts limit:5 %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
