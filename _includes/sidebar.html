@@ -35,7 +35,8 @@
     <ul>
     	{% assign sortedposts = (site.posts | sort: 'date')  %}
         {% for post in sortedposts limit:5 %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        	{% assign date_format = site.date_format.categories %}
+          <li>{{ post.date | date: date_format }}<a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
