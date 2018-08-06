@@ -33,10 +33,9 @@
 <div class="sidebar well">
     <h1>{{ trans.recent_posts }}</h1>
     <ul>
-    	{% assign sortedposts = (site.posts | sort: 'date')  %}
-        {% for post in sortedposts limit:5 %}
-        	{% assign date_format = site.date_format.categories %}
-          <li>{{ post.date | date: date_format }}<a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+    	{% assign sortedposts = site.posts  %} 
+        {% for post in sortedposts %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date_to_string }} {{ post.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
