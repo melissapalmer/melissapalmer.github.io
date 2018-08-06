@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Newman with Docker from Windows with Vagrant"
+title: "Newman with Docker on Windows with Vagrant"
 date: 2018-08-05 17:45:09 -0700
 categories: devops
 tags: 
@@ -8,8 +8,8 @@ tags:
 - Newman
 - Docker
 - Vagrant
-description: Newman with Docker from Windows with Vagrant
-published: true
+description: Newman with Docker on Windows with Vagrant
+published: false
 ---
 
 [Postman](https://www.getpostman.com/) which is a popular API client for interacting with RESTFull APIs. Postman also includes the ability to create test suites and run these from its UI. Postman also has its own CLI ... [Newman](https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman) that allows for running of a Postman collection (test suites) from the command line. 
@@ -17,13 +17,44 @@ published: true
 There are allot of tutorials out there explain how to use Newman & Jenkins. The thing is that all of these examples require you to have a Jenkins master/slave that has Node.js installed along with the Newman npm package. 
 
 # Newman has its own Docker Image
-more details on that at: [https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker](https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker)
+more details on that at: [Newman with Docker](https://www.getpostman.com/docs/v6/postman/collection_runs/newman_with_docker). Using this image its as simple as running the a command like:
 
-Using this Docker image its as simple as running the a command like
+`docker run -t postman/newman_ubuntu1404 GOOGLE.postman_collection.json` 
 
-`docker run -t postman/newman_ubuntu1404 --url="https://www.getpostman.com/collections/8a0c9bc08f062d12dcda"` 
+to run your Postman Test Scripts with Newman and the output displayed in the console. The entry point to the Docker image is Newman. So you can use all Newman command line parameters. These can be found at [Command line integration with Newman](https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman)
 
-to run your Postman Test Scripts. 
+Running the above command will output to the console (ie: docker logs) ... which is the same output you would see if running Newman on its own: 
+
+```
+newman
+
+GOOGLE
+
+→ ViewHomePage
+  GET https://www.google.com [200 OK, 12.55KB, 854ms]
+  ✓  Status code is 200
+  ✓  Response time is less than 5000ms
+
+┌─────────────────────────┬──────────┬──────────┐
+│                         │ executed │   failed │
+├─────────────────────────┼──────────┼──────────┤
+│              iterations │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│                requests │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│            test-scripts │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│      prerequest-scripts │        0 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│              assertions │        2 │        0 │
+├─────────────────────────┴──────────┴──────────┤
+│ total run duration: 1344ms                    │
+├───────────────────────────────────────────────┤
+│ total data received: 11.85KB (approx)         │
+├───────────────────────────────────────────────┤
+│ average response time: 854ms                  │
+└───────────────────────────────────────────────┘
+```
 
 # I wanted to see if we can take advantage of Newman's Docker Image 
 to do the same thing as all these tutorials BUT avoid having to install Node.js or Newman on a Jenkins master/slave. To get started, I'll just use the Newman Docker Image without Jenkins. 
@@ -122,7 +153,7 @@ end
 
 This will run your docker run command on VM host, command that gets run is: 
 
-`docker run -t postman/newman_ubuntu1404 /vagrant/newman-with-docker-on-windows/GOOGLE.postman_collection.json --environment=/vagrant/newman-with-docker-on-windows/GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export /vagrant/newman-with-docker-on-windows/newman-report.xml --reporter-html-export /vagrant/newman-with-docker-on-windows/outputfile.html`
+`docker run -t postman/newman_ubuntu1404 run GOOGLE.postman_collection.json --environment=GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export newman-report.xml --reporter-html-export outputfile.html`
 
 which will run the postman collection GOOGLE.postman_collection.json using environment variables in GOOGLE_ENV.postman_environment.json and output the results to the command line, as well as to an html file and xml file under /vagrant/newman-with-docker-on-windows/ folder. Which we will be able to see on our Windows machine as its been synced with Docker via volumns and Vagrant via synced folders. 
 
