@@ -31,7 +31,7 @@
 {% endif %}
 
 <div class="sidebar well">
-    <h1>{{ trans.recent_posts }}</h1>
+    <h1>{{ trans.recent_posts }} change side? </h1>
     <ul>
     	{% assign sortedposts = site.posts | sort: 'date' | reversed %}
         {% for post in sortedposts limit:5 %}
