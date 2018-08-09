@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Java Code metrics with SonarLint in Eclipse"
+title:  "Code metrics with SonarLint in Eclipse"
 date: 2018-08-09 10:45:09 -0700
 categories: testing
 tags: 
 - SonarQube
 - SonarLint
-description: Java Code metrics with SonarLint in Eclipse
+description: Code metrics with SonarLint in Eclipse
 ---
 
 # Overview
