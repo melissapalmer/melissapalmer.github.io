@@ -2,6 +2,8 @@
   url: /documentation.html
 - title: DevOps
   url: /devops.html
+- title: Testing
+  url: /testing.html
 - title: About
   url: /about.html
 #- title: Development
