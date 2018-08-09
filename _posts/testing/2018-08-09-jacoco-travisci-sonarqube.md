@@ -71,7 +71,7 @@ However, the `jacoco.exec` file format is not readable by humans, but it can be 
 [INFO] ------------------------------------------------------------------------
 ```
 
-Have a look at [![Build status](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube.svg?branch=master)](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube) for the code analysis report of this project on SonarCloud. 
+Have a look at [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Aspring-boot-github-sonarqube&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Aspring-boot-github-sonarqube) for the code analysis report of this project on SonarCloud. 
 
 ## Integration with Travis CI
 
