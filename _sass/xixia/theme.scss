@@ -101,6 +101,11 @@ body {
 	letter-spacing: 3px;
 }
 
+.post-date i {
+	text-transform: capitalize;
+	font-size: 14px;
+}
+
 /* 
     custom bootstrap navbar
     reference from: https://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3 
