@@ -122,9 +122,11 @@ You can then also add badges to your GitHub repo to show the build status of you
 [![Build status](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube.svg?branch=master)](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Aspring-boot-github-sonarqube&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Aspring-boot-github-sonarqube)
 
 - For GitHub add: 
-`[![Build status](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube.svg?branch=master)](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube)`
+
+	`[![Build status](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube.svg?branch=master)](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube)`
 - For SonarCloud add: 
-`[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Aspring-boot-github-sonarqube&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Aspring-boot-github-sonarqube)`
+
+	`[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Aspring-boot-github-sonarqube&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.example%3Aspring-boot-github-sonarqube)`
 
 # References
 - [https://thepracticaldeveloper.com/2016/02/06/test-coverage-analysis-for-your-spring-boot-app/](https://thepracticaldeveloper.com/2016/02/06/test-coverage-analysis-for-your-spring-boot-app/)
