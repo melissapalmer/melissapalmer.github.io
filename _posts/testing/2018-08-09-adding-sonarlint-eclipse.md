@@ -18,7 +18,7 @@ Usually a company will setup SonarQube server or user SonarCloud integrated with
 
 [SonarLint](https://www.sonarlint.org/) is an IDE extension that helps you detect and fix quality issues as you write code. 
 
-In this post I describe how to include SonarLint in your Eclipse (or STS) IDE. 
+In this post I describe how to include SonarLint in your Eclipse IDE. 
 
 # Steps 
 
@@ -33,7 +33,7 @@ In Eclipse go to :
 
 `Help --> Install New Software --> add URL https://eclipse-uc.sonarlint.org`
 
-![Eclipse Software Site for SonarQube](images/EclipseSoftwareSite_SonarQube.JPG)
+![Eclipse Software Site for SonarQube](/assets/images/testing/EclipseSoftwareSite_SonarQube.JPG)
 
 Once you have installed the plugin, you'll need to restart Eclipse as usual. THEN 
 
@@ -41,7 +41,7 @@ Once you have installed the plugin, you'll need to restart Eclipse as usual. THE
 
 by right clicking on your project in the Package Explorer and bind project to a server as below: 
 
-![Eclipse Enable SonarQube on Project](images/EclipseEnable_SonarQube.JPG)
+![Eclipse Enable SonarQube on Project](/assets/images/testing/EclipseEnable_SonarQube.JPG)
 
 If its the first time you doing this, you will need to Connect a SonarQube server. You will be prompted for your SonarCloud secret, and organization name. 
 Once your SonarQube server is added, and you've bind the project. Eclipse will run a Update data from SonarQube. 
@@ -56,7 +56,7 @@ I found the above two views the most useful, there are others you can add and de
 
 See below how the On-The-Fly view, highlights in the code issues, telling you which SonarQube rule this relates to. To get more infomation about the Rule use the SonarLint Rule Description view which will give you a full description of the Rule for issue you looking at. 
 
-![Eclipse Enable SonarQube on Project](images/EclipseViews_SonarQube.JPG)
+![Eclipse Enable SonarQube on Project](/assets/images/testing/EclipseViews_SonarQube.JPG)
 
 # References
 - [https://www.sonarlint.org/](https://www.sonarlint.org/)
