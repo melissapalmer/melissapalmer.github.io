@@ -153,7 +153,7 @@ end
 
 This will run your docker run command on VM host, command that gets run is: 
 
-`docker run -t postman/newman_ubuntu1404 run GOOGLE.postman_collection.json --environment=GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export newman-report.xml --reporter-html-export outputfile.html`
+`docker run -v "$(pwd)":/tmp postman/newman_ubuntu1404 run /tmp/GOOGLE.postman_collection.json --environment=/tmp/GOOGLE_ENV.postman_environment.json --reporters cli,junit,html --reporter-junit-export /tmp/newman-report.xml --reporter-html-export /tmp/outputfile.html`
 
 which will run the postman collection GOOGLE.postman_collection.json using environment variables in GOOGLE_ENV.postman_environment.json and output the results to the command line, as well as to an html file and xml file under /vagrant/newman-with-docker-on-windows/ folder. Which we will be able to see on our Windows machine as its been synced with Docker via volumns and Vagrant via synced folders. 
 
@@ -170,4 +170,5 @@ References
 - [https://dzone.com/articles/testing-apis-using-postman](https://dzone.com/articles/testing-apis-using-postman)
 
 
-
+http://blog.hde.co.jp/entry/2015/12/02/120006
+We also configure the share-folder between the local machine and the Docker host machine over here.
