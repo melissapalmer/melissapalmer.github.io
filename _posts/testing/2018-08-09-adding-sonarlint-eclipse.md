@@ -13,12 +13,12 @@ description: Java Code metrics with SonarLint in Eclipse
 
 [SonarQube](https://www.sonarqube.org/about/) is an open source platform that automates static code analysis to detect bugs, code smells and security vulnerabilities on 20+ programming languages. 
 
-Usually a company will setup SonarQube server or user SonarCloud integrated with a CI server to fail the build when quality gates are not met. It's always better to fix things earlier than later. [SonarLint](https://www.sonarlint.org/) allows you to
+Usually a company will setup SonarQube server or user SonarCloud integrated with a CI server to fail the build when quality gates are not met. **It's always better to fix things earlier than later**. [SonarLint](https://www.sonarlint.org/) allows you to
 > Fix issues before they exist
 
 [SonarLint](https://www.sonarlint.org/) is an IDE extension that helps you detect and fix quality issues as you write code. 
 
-In this post I describe how to include SonarLint in your Eclipse IDE. 
+In this post I describe how to include SonarLint in your **Eclipse IDE**. 
 
 # Steps 
 
