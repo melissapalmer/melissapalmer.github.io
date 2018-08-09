@@ -49,7 +49,7 @@ A new file will be generated to the target directory, see output lines similar t
 [INFO]
 ```
 
-However, the `jacoco.exec` file format is not readable by humans, but it can be sent to SonarQube for more analysis. That is what the sonar related paramaters we used in the command above do. In the logs you see lines simlar to those below, when Maven is not sending the JaCoCo file to SonarCloud for analysis by SonarQube.   
+However, the `jacoco.exec` file format is not readable by humans, but it can be sent to SonarQube for more analysis. That is what the sonar related paramaters we used in the command above do. In the logs you see lines simlar to those below, where Maven is sending the JaCoCo file to SonarCloud for further analysis by SonarQube.   
 
 ```
 [INFO] --- sonar-maven-plugin:3.4.1.1168:sonar (default-cli) @ spring-boot-github-sonarqube ---
@@ -71,7 +71,7 @@ However, the `jacoco.exec` file format is not readable by humans, but it can be 
 [INFO] ------------------------------------------------------------------------
 ```
 
-Have a look at [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.example%3Aspring-boot-github-sonarqube&metric=alert_status)] for the code analysis report of this project on SonarCloud. 
+Have a look at [![Build status](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube.svg?branch=master)](https://travis-ci.org/melissapalmer/spring-boot-github-sonarqube) for the code analysis report of this project on SonarCloud. 
 
 ## Integration with Travis CI
 
