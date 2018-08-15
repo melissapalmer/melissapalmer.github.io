@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Code metrics with SonarLint in Eclipse"
 date: 2018-08-09 10:45:09 -0700
 categories: testing

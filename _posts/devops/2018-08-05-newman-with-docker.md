@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: "Newman with Docker on Windows with Vagrant"
 date: 2018-08-05 17:45:09 -0700
 categories: devops

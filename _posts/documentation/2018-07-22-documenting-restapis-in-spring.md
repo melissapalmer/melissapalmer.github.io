@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Documenting Rest APIs in Spring"
 date: 2018-07-19 17:45:09 -0700
 categories: documentation

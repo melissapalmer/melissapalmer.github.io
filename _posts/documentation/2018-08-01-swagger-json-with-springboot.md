@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "swagger.json with Spring Boot"
 date: 2018-08-01 17:45:09 -0700
 categories: documentation

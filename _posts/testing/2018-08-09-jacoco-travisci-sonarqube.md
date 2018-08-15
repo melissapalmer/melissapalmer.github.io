@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Java Code metrics with JaCoCo, TravisCi and SonarCloud"
 date: 2018-08-09 09:45:09 -0700
 categories: testing

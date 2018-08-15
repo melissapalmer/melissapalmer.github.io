@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Getting API Umbrella on Windows"
 date: 2018-07-23 17:45:09 -0700
 categories: microservices
