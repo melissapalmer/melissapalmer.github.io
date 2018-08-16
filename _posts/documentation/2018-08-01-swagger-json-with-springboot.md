@@ -12,7 +12,7 @@ published: true
 ---
 
 [Swagger](https://swagger.io/) 
-> Swagger is the world’s largest framework of API developer tools for the OpenAPI Specification (OAS), enabling development across the entire API lifecycle, from design and documentation, to test and deployment.
+> Swagger is the world's largest framework of API developer tools for the OpenAPI Specification (OAS), enabling development across the entire API lifecycle, from design and documentation, to test and deployment.
 
 [SpringFox](http://springfox.github.io/springfox/) 
 > is a Swagger integration for the Spring Framework. It can automatically inspect your classes, detect Controllers, their methods, model classes they use and URLs to which they are mapped. Without any handwritten documentation, it can generate a lot of information about your API just by inspecting classes in your application.
