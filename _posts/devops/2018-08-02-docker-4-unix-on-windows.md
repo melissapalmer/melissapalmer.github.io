@@ -119,7 +119,7 @@ Host docker-4-unix-on-windows
 C:\work\projects\Learning\docker>
 ```
 
-
+Here you can see the IP to use in Putty is 127.0.0.1 and Port 2222
 
 You now have Docker running on a Linux Machine... on Windows.
 
