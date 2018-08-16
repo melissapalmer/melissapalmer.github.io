@@ -24,7 +24,7 @@ All of these install like any other windows program.
 
 # You'll need to create and setup an AWS Account:
 ## Ensure you have an AWS Account
-You  an register for an [AWS Account](https://portal.aws.amazon.com/billing/signup#/support), choose the Basic Plan ("Free"). You will need to supply your credit card details :-( Even though its a Free option. 
+You  an register for an [AWS Account](https://portal.aws.amazon.com/billing/signup#/support), choose the Basic Plan ("Free"). You will need to supply your credit card details :-( even though its a free option. 
 
 ## Setup an access key in AWS
 Go to the [IAM console](https://console.aws.amazon.com/iam/home#/users), and add a new user. 
