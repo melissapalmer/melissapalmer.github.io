@@ -120,7 +120,7 @@ You don't want to include the AWS_ACCESS_KEY & AWS_SECRET_KEY in any files you c
 
 ```
 set AWS_ACCESS_KEY=YOUR_OWN_ACCESS_KEY_FOR_VAGRANT_USER_CREATED_ABOVE
-set AWS_SECRET_KEY=YOUR_OWN_AWS_SECRET_KEY_VAGRANT_USER_CREATED_ABOVE+mnKlra+e5MRX3nECzGNy
+set AWS_SECRET_KEY=YOUR_OWN_AWS_SECRET_KEY_VAGRANT_USER_CREATED_ABOVE
 ```
 
 ## Setup your Vagrantfile
@@ -227,7 +227,7 @@ You can login to the instance using `vagrant ssh` or Putty
 
 ![Putty Private Key](/assets/images/devops/Putty-PrivateKey.JPG)
 
-*NOTE:* Don’t forget to run vagrant halt and vagrant destroy once you’re done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
+*NOTE:* Don’t forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
 
 You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws)
 
