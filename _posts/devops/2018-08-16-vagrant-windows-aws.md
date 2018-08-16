@@ -170,13 +170,13 @@ end # Vagrant.configure
 
 ### Explanation of Vagrantfile
 
-- `config.vm.box = 'aws/dummy'` is the name of the box you added when running vagrant box add for AWS dummy box above
-- `config.vm.synced_folder ".", "/vagrant", disabled: true`  I kept Being asked for details for SMB credentials. To correct that this line was added.
-- `aws.access_key_id = ENV['AWS_ACCESS_KEY']` and `aws.secret_access_key = ENV['AWS_SECRET_KEY']` is using the environment variables you setup in the setenv.bat
-- `aws.keypair_name = 'aws_key_nopass'` name of the keypair_name needs to match the name of KeyPair you setup in AWS itself
-- `aws.region = "eu-central-1"` and `aws.ami = "ami-de8fb135"` need to match the region you using for your AWS account, and AMI name you found in earlier step above
-- `aws.security_groups = ['vagrant-group']` is the name of the security group created in AWS with SSH port opened
-- `override.ssh.private_key_path = 'ssh/aws_key_nopass.pem'` is the location of your private key on your local windows PC. Put this in a folder ssh at same level as your Vagrant file  
+- **config.vm.box = 'aws/dummy'** is the name of the box you added when running vagrant box add for AWS dummy box above
+- **config.vm.synced_folder ".", "/vagrant", disabled: true**  I kept Being asked for details for SMB credentials. To correct that this line was added.
+- **aws.access_key_id = ENV['AWS_ACCESS_KEY']** and **aws.secret_access_key = ENV['AWS_SECRET_KEY']** is using the environment variables you setup in the setenv.bat
+- **aws.keypair_name = 'aws_key_nopass'** name of the keypair_name needs to match the name of KeyPair you setup in AWS itself
+- **aws.region = "eu-central-1"** and **aws.ami = "ami-de8fb135"** need to match the region you using for your AWS account, and AMI name you found in earlier step above
+- **aws.security_groups = ['vagrant-group']** is the name of the security group created in AWS with SSH port opened
+- **override.ssh.private_key_path = 'ssh/aws_key_nopass.pem'** is the location of your private key on your local windows PC. Put this in a folder ssh at same level as your Vagrant file  
 
 # Launching the Instance in AWS
 To launch the instance, use 
@@ -231,9 +231,10 @@ You can login to the instance using `vagrant ssh` or Putty
 
 ![Putty Private Key](/assets/images/devops/Putty-PrivateKey.JPG)
 
-*NOTE:* Don't forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
 
-You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws) 
+**NOTE:** Don't forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
+
+**You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws) **
 
 # References
 - [https://www.vagrantup.com/docs/providers/](https://www.vagrantup.com/docs/providers/)
