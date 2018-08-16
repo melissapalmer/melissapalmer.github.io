@@ -221,7 +221,7 @@ You can login to the instance using `vagrant ssh` or Putty
 
 ![Putty Private Key](/assets/images/devops/Putty-PrivateKey.JPG)
 
-*NOTE:* Don’t forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
+*NOTE:* Don't forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
 
 You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws) 
 
