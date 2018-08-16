@@ -234,7 +234,7 @@ You can login to the instance using `vagrant ssh` or Putty
 
 **NOTE:** Don't forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
 
-**You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws) **
+**You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws)**
 
 # References
 - [https://www.vagrantup.com/docs/providers/](https://www.vagrantup.com/docs/providers/)
