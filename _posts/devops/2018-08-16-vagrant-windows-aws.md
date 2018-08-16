@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Using Vagrant (on Windows) to launch an AWS instance"
-date: 2018-08-16 17:45:09 -0700
+date: 2018-08-16 08:45:09 -0700
 categories: devops
 tags: 
 - Vagrant
