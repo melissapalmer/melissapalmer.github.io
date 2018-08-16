@@ -156,6 +156,49 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     
   end # config.vm.provider 'aws'
 end # Vagrant.configure
+```
+
+### Explanation of Vagrantfile
+
+- `config.vm.box = 'aws/dummy'` is the name of the box you added when running vagrant box add for AWS dummy box above
+- `config.vm.synced_folder ".", "/vagrant", disabled: true`  I kept Being asked for details for SMB credentials. To correct that this line was added.
+- `aws.access_key_id = ENV['AWS_ACCESS_KEY']` and `aws.secret_access_key = ENV['AWS_SECRET_KEY']` is using the environment variables you setup in the setenv.bat
+- `aws.keypair_name = 'aws_key_nopass'` name of the keypair_name needs to match the name of KeyPair you setup in AWS itself
+- `aws.region = "eu-central-1"` and `aws.ami = "ami-de8fb135"` need to match the region you using for your AWS account, and AMI name you found in earlier step above
+- `aws.security_groups = ['vagrant-group']` is the name of the security group created in AWS with SSH port opened
+- `override.ssh.private_key_path = 'ssh/aws_key_nopass.pem'` is the location of your private key on your local windows PC. Put this in a folder ssh at same level as your Vagrant file  
+
+# Launching the Instance in AWS
+To launch the instance, use 
+
+`vagrant up`
+
+in the console you will see output such as
+
+```
+C:\vagrant-aws>vagrant up
+Bringing machine 'default' up with 'aws' provider...
+==> default: Warning! The AWS provider doesn't support any of the Vagrant
+==> default: high-level network configurations (`config.vm.network`). They
+==> default: will be silently ignored.
+==> default: Launching an instance with the following settings...
+==> default:  -- Type: t2.micro
+==> default:  -- AMI: ami-de8fb135
+==> default:  -- Region: eu-central-1
+==> default:  -- Keypair: aws_key_nopass
+==> default:  -- Security Groups: ["vagrant-group"]
+==> default:  -- Block Device Mapping: []
+==> default:  -- Terminate On Shutdown: false
+==> default:  -- Monitoring: false
+==> default:  -- EBS optimized: false
+==> default:  -- Source Destination check:
+==> default:  -- Assigning a public IP address in a VPC: false
+==> default:  -- VPC tenancy specification: default
+==> default: Waiting for instance to become "ready"...
+==> default: Waiting for SSH to become available...
+==> default: Machine is booted and ready for use!
+
+C:\vagrant-aws>
 ``` 
 
 
