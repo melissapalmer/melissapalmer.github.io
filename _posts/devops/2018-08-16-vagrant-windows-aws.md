@@ -28,10 +28,13 @@ You  an register for an [AWS Account](https://portal.aws.amazon.com/billing/sign
 
 ## Setup an access key in AWS
 Go to the [IAM console](https://console.aws.amazon.com/iam/home#/users), and add a new user. 
-Ensure this user has _Programmatic Access_ and add it to a new group you call admin with AdministratorAccess. 
+
+- Ensure this user has _Programmatic Access_ 
+- and add it to a new group you call admin with AdministratorAccess. 
 (The AWS wizard will step you through the above)
 
-You'll then be provided with the Access Key ID and the Secret Access Key. You need to keep these somewhere safe, they wont be provided again in the AWS screens. 
+You'll then be provided with the Access Key ID and the Secret Access Key. 
+You need to keep these somewhere safe, they wont be provided again in the AWS screens. 
 
 ## Create a new Key Pair
 
@@ -50,6 +53,8 @@ To do this Digital Ocean has detailed instructions on how to do this at [How to 
 -- using PuTTYgen to load the ppk, then go to Conversion -> Export OpenSSH key. And save file with extension for this file is .pem.
 
 *NOTE:* DON'T include a passphrase as Vagrant-aws currently fails if the private_key file has a passphrase.
+
+| ![PuttyGen1](/assets/images/devops/PuttyGen1.JPG) | ![PuttyGen2](/assets/images/devops/PuttyGen2.JPG) | ![PuttyGen3](/assets/images/devops/PuttyGen3.JPG) |
 
 ### In AWS
 
