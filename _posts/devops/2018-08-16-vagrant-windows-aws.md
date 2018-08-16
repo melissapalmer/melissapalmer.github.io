@@ -118,6 +118,10 @@ to verify the box has been added
 ## Setup environment variables for AWS_ACCESS_KEY & AWS_SECRET_KEY
 You don't want to include the AWS_ACCESS_KEY & AWS_SECRET_KEY in any files you commit to GIT. I created a batch file (setenv.bat) with the following lines (that I don't add to GIT) 
 
+```
+set AWS_ACCESS_KEY=YOUR_ENVIRONMENT_KEY
+set AWS_SECRET_KEY=YOUR_ENVIRONMENT_SECRET
+```
 
 ## Setup your Vagrantfile
 
