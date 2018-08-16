@@ -79,14 +79,12 @@ You will see later in this post, that in the Vagrantfile you specify a ami (Amaz
 
 ![AWS AMI Selection](/assets/images/devops/AWS-AMI.JPG)
 
-
 # Prepare Vagrant
 
 ## Install the AWS provider plugin
 Vagrant does not include AWS as a built in provider, you need to manually install this provider as a plugin. 
 
 I had a couple of issues on Windows 10, with the standard vagrant-aws plugin. BUG that libxml2 is not found not found on Windows 10 for the vagrant-aws plugin, therefore have to run 2 commands (Windows 10, Vagrant Installed Version: 2.1.1) https://github.com/mitchellh/vagrant-aws/issues/539 comment from "rurku commented on Jun 18"
-
 
 `vagrant plugin install --plugin-version 1.0.1 fog-ovirt`
 
@@ -117,7 +115,6 @@ to verify the box has been added
 
 ## Setup environment variables for AWS_ACCESS_KEY & AWS_SECRET_KEY
 You don't want to include the AWS_ACCESS_KEY & AWS_SECRET_KEY in any files you commit to GIT. I created a batch file (setenv.bat) with the following lines (that I don't add to GIT) 
-
 
 
 ## Setup your Vagrantfile
