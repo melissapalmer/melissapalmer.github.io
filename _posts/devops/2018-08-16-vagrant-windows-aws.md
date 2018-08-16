@@ -199,9 +199,31 @@ Bringing machine 'default' up with 'aws' provider...
 ==> default: Machine is booted and ready for use!
 
 C:\vagrant-aws>
-``` 
+```
 
+You should now be able to see you instance in the AWS [EC2 console](https://eu-central-1.console.aws.amazon.com/ec2/v2/home?region=eu-central-1#Instances:sort=instanceId)
 
+![AWS New Instance](/assets/images/devops/AWS-NewInstance.JPG)
+
+Click on your instance in AWS to see the public DNS and IP address. 
+
+![AWS PublicIP](/assets/images/devops/AWS-PublicIP.JPG)
+
+You can login to the instance using `vagrant ssh` or Putty
+
+### Login your instance using Putty
+
+- Open Putty and use the above public DNS as your host name
+- Then go to Connection -> SSH -> Auth 
+- and browser to your private key you created above
+- click Open 
+- Putty will open a terminal to your AWS Instance that you can now work against
+
+![Putty Private Key](/assets/images/devops/Putty-PrivateKey.JPG)
+
+*NOTE:* Don’t forget to run vagrant halt and vagrant destroy once you're done (if you are only using it for testing)! Else you will be charged and/or use up your free credits.
+
+You can see the code for this post on [GIT](https://github.com/melissapalmer/vagrant-aws) 
 
 # References
 - [https://www.vagrantup.com/docs/providers/](https://www.vagrantup.com/docs/providers/)
