@@ -4,15 +4,14 @@
         <a href="{{ site.baseurl }}/">
             <img src="{{ site.baseurl }}/assets/images/Melissa_Square.jpg" class="img-circle" />
         </a>
-        <!--
-        <h3 class="title">
-        <a href="{{ site.BASE_PATH }}/">{{ site.title }}</a>
-        </h3>
-        -->
     </header>
-    <!-- <div class="text-center">
-        {{ site.description }}
-    </div> -->
+    <div class="text-center">        
+	    <ul class="list-unstyled list-inline">
+		  <li><a href="/archive.html">Archive</a></li>
+		  <li><a href="/categories.html">Categories</a></li>
+		  <li><a href="/tags.html">Tags</a></li>                   
+		</ul>
+    </div>
 </div>
 
 {% if site.data.tops.size > 0 %}
@@ -40,7 +39,7 @@
     </ul>
 </div>
 
-<div class="sidebar well">
+<!-- <div class="sidebar well">
     <h1>Tags</h1>
     {% unless site.tags == empty %}
     <ul class="list-unstyled list-inline">
@@ -61,7 +60,7 @@
       {% assign tags_list = nil %}
     </ul>
     {% endunless %}  
-</div>
+</div> -->
 
 <div class="sidebar well">
     {% include links-list.html %}
