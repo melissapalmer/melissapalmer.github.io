@@ -9,7 +9,7 @@ layout: default
             {{ page.date | date: date_format }}
             {% unless page.tags == empty %}
 		    
-		      {% assign tags_list = page.tags | sort %}
+		      {% assign tags_list = page.tags %}
 		      {% if tags_list.first[0] == null %}
 		        {% for tag in tags_list %} 
 		                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
@@ -63,7 +63,7 @@ layout: default
     {% unless page.tags == empty %}
     <ul class="list-unstyled list-inline">
       <li><i class="icon-tags"></i></li>
-      {% assign tags_list = page.tags | sort %}
+      {% assign tags_list = page.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %} 
             <li class="icon-style">
