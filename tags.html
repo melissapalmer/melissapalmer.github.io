@@ -2,6 +2,29 @@
 layout: default
 ---
 
+<div class="sidebar well">
+    <h1>Tags</h1>
+    {% unless site.tags == empty %}
+    <ul class="list-unstyled list-inline">
+      {% assign tags_list = site.tags %}
+      {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %} 
+            <li class="icon-style">
+                <a href="{{ site.baseurl }}/tags.html">{{ tag }}<span>({{ site.tags[tag].size }})</span>{% unless forloop.last %},{% endunless %}</a>
+            </li>
+        {% endfor %}
+      {% else %}
+        {% for tag in tags_list %} 
+            <li class="icon-style">
+                <a href="{{ site.baseurl }}/tags.html">{{ tag[0] }}<span>({{ tag[1].size }})</span>{% unless forloop.last %},{% endunless %}</a>
+            </li>           
+        {% endfor %}
+      {% endif %}
+      {% assign tags_list = nil %}
+    </ul>
+    {% endunless %}  
+</div>
+
 <div class="well article">
 {% assign sortedtags = site.tags | sort %}
 {% for tag in sortedtags %}
