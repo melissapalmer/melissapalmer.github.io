@@ -10,13 +10,13 @@ layout: default
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %} 
             <li class="icon-style">
-                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag }}<span>({{ site.tags[tag].size }})</span>{% unless forloop.last %},{% endunless %}</a>
+                <a href="{{ site.baseurl }}/tags.html">{{ tag }}<span>({{ site.tags[tag].size }})</span>{% unless forloop.last %},{% endunless %}</a>
             </li>
         {% endfor %}
       {% else %}
         {% for tag in tags_list %} 
             <li class="icon-style">
-                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">{{ tag[0] }}<span>({{ tag[1].size }})</span>{% unless forloop.last %},{% endunless %}</a>
+                <a href="{{ site.baseurl }}/tags.html">{{ tag[0] }}<span>({{ tag[1].size }})</span>{% unless forloop.last %},{% endunless %}</a>
             </li>           
         {% endfor %}
       {% endif %}
