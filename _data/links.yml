@@ -1,5 +1,8 @@
-- url: "http://xixia.info"
-  title: "Xixia"
+- url: "https://www.baeldung.com/"
+  title: "Baeldung"
 
-- url: "https://github.com/zxixia/jekyll-xixia"
-  title: "Jekyll-Xixia"  
+- url: "http://www.mkyong.com"
+  title: "Mkyong"  
+  
+- url: "https://springframework.guru/"
+  title: "The Spring Guru"  

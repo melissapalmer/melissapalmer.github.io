@@ -63,7 +63,7 @@ body {
 /* Xixia logo */
 .sidebar-header {
 	text-align: center;
-	margin-bottom: 10px;
+	padding: 10px;
 }
 
 .container-left {
@@ -239,4 +239,8 @@ table tr td {
 
 .well{     
 	margin-bottom: 0px; 
+	padding-top: 1px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
 }
