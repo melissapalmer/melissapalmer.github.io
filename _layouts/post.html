@@ -3,10 +3,34 @@ layout: default
 ---
 {% assign trans = site.data.values[site.lan] %}
 <div class="well article">
-        <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
+        <h2>{{ page.title }}</h2>
         <span class="post-date">
             {% assign date_format = site.date_format.title %}
             {{ page.date | date: date_format }}
+            {% unless page.tags == empty %}
+		    
+		      {% assign tags_list = page.tags | sort %}
+		      {% if tags_list.first[0] == null %}
+		        {% for tag in tags_list %} 
+		                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
+		                #{{ tag }}
+		                {% unless forloop.last %},{% endunless %}
+		                </a> &nbsp;
+		        {% endfor %}
+		      {% else %}
+		        {% for tag in tags_list %} 
+		            
+		                <a href="{{ site.baseurl }}/tags.html#{{ tag[0] }}">
+		                    #{{ tag[0] }}
+		                    {% unless forloop.last %},{% endunless %}
+		                </a> &nbsp;
+		            
+		           
+		        {% endfor %}
+		      {% endif %}
+		      {% assign tags_list = nil %}
+		 
+		    {% endunless %}
         </span>
         <hr style="border-top:1px solid #28323C;"/>
     
