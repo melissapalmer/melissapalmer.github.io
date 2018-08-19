@@ -13,16 +13,12 @@ layout: default
 		      {% if tags_list.first[0] == null %}
 		        {% for tag in tags_list %} 
 	                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
-	                #{{ tag }}
-	                {% unless forloop.last %}&nbsp;{% endunless %}
-	                </a>
+	                #{{ tag }}</a>
 		        {% endfor %}
 		      {% else %}
 		        {% for tag in tags_list %} 		            
 	                <a href="{{ site.baseurl }}/tags.html#{{ tag[0] }}">
-	                    #{{ tag[0] }}
-	                    {% unless forloop.last %}&nbsp;{% endunless %}
-	                </a>
+	                    #{{ tag[0] }}</a>
 		        {% endfor %}
 		      {% endif %}
 		      {% assign tags_list = nil %}		 
