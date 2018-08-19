@@ -12,24 +12,20 @@ layout: default
 		      {% assign tags_list = page.tags %}
 		      {% if tags_list.first[0] == null %}
 		        {% for tag in tags_list %} 
-		                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
-		                #{{ tag }}
-		                {% unless forloop.last %},{% endunless %}
-		                </a> &nbsp;
+	                <a href="{{ site.baseurl }}/tags.html#{{ tag }}">
+	                #{{ tag }}
+	                {% unless forloop.last %}&nbsp;{% endunless %}
+	                </a>
 		        {% endfor %}
 		      {% else %}
-		        {% for tag in tags_list %} 
-		            
-		                <a href="{{ site.baseurl }}/tags.html#{{ tag[0] }}">
-		                    #{{ tag[0] }}
-		                    {% unless forloop.last %},{% endunless %}
-		                </a> &nbsp;
-		            
-		           
+		        {% for tag in tags_list %} 		            
+	                <a href="{{ site.baseurl }}/tags.html#{{ tag[0] }}">
+	                    #{{ tag[0] }}
+	                    {% unless forloop.last %}&nbsp;{% endunless %}
+	                </a>
 		        {% endfor %}
 		      {% endif %}
-		      {% assign tags_list = nil %}
-		 
+		      {% assign tags_list = nil %}		 
 		    {% endunless %}
         </span>
         <hr style="border-top:1px solid #28323C;"/>
