@@ -6,7 +6,7 @@ layout: default
     <h1>Tags</h1>
     {% unless site.tags == empty %}
     <ul class="list-unstyled list-inline">
-      {% assign tags_list = site.tags %}
+      {% assign tags_list = site.tags | sort %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %} 
             <li class="icon-style">
