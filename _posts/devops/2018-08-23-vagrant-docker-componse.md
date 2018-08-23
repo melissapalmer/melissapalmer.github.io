@@ -113,5 +113,4 @@ We have just used Vagrant
 - [https://medium.com/@cnadeau_/vagrant-as-a-development-environment-e5a83010fb49](https://medium.com/@cnadeau_/vagrant-as-a-development-environment-e5a83010fb49)
 - [https://github.com/leighmcculloch/vagrant-docker-compose](https://github.com/leighmcculloch/vagrant-docker-compose)
 - [https://gist.github.com/mcharytoniuk/0388cbc5d2e0afacd1e4](https://gist.github.com/mcharytoniuk/0388cbc5d2e0afacd1e4)
-- [https://hub.docker.com/_/postgres/](https://hub.docker.com/_/postgres/)
 
