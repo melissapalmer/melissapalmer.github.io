@@ -6,7 +6,6 @@ date: 2018-08-05 17:45:09 -0700
 categories: devops
 tags: 
 - Postman
-- Newman
 - Docker
 - Vagrant
 description: Newman with Docker on Windows with Vagrant
