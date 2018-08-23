@@ -5,7 +5,7 @@ title:  "Swagger Codegen 2 Java Classes with Maven"
 date: 2018-07-26 17:45:09 -0700
 categories: documentation
 tags: 
-- Swagger Codegen
+- Swagger
 - Maven
 description: Swagger Codegen 2 Java Classes with Maven
 ---

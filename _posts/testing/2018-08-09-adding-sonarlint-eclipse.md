@@ -6,7 +6,6 @@ date: 2018-08-09 10:45:09 -0700
 categories: testing
 tags: 
 - SonarQube
-- SonarLint
 description: Code metrics with SonarLint in Eclipse
 ---
 

@@ -6,7 +6,6 @@ date: 2018-08-09 09:45:09 -0700
 categories: testing
 tags: 
 - SonarQube
-- SonarCloud
 - TravisCi
 description: Java Code metrics with JaCoCo, TravisCi and SonarCloud
 ---

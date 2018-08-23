@@ -6,7 +6,6 @@ date: 2018-08-23 08:45:09 -0700
 categories: devops
 tags: 
 - Vagrant
-- docker-compose
 description: Vagrant docker-compose
 published: true
 ---
