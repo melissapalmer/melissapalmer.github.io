@@ -26,7 +26,9 @@ In this post we will be using Vagrant to spin up a base VM, provision it with do
 
 # Install vagrant-docker-compose plugin: 
 
-`vagrant plugin install vagrant-docker-compose`
+```
+vagrant plugin install vagrant-docker-compose
+```
 
 # Create Vagrantfile
 
@@ -88,7 +90,9 @@ services:
 
 # Run 
 
-`vagrant up`
+```
+vagrant up
+```
 
 # Test
 
@@ -98,7 +102,11 @@ By going to [http://localhost:8080/](http://localhost:8080/) you should see the 
 
 # What just happened? 
 
-We have just used Vagrant to spin up a base VM, provision it with docker and docker-compose and then run the docker-compose command against our docker-composed.yml which has then intern spin number a 2 containers which we can interact with. 
+We have just used Vagrant 
+- to spin up a base VM, 
+- provision it with docker and docker-compose 
+- and then run the docker-compose command against our docker-composed.yml 
+- which has then intern spin number a 2 containers which we can interact with. 
 
 # References
 
