@@ -96,7 +96,9 @@ By going to [http://localhost:8080/](http://localhost:8080/) you should see the 
 
 ![Adminer](/assets/images/devops/Adminer.JPG)
 
+# What just happened? 
 
+We have just used Vagrant to spin up a base VM, provision it with docker and docker-compose and then run the docker-compose command against our docker-composed.yml which has then intern spin number a 2 containers which we can interact with. 
 
 # References
 
