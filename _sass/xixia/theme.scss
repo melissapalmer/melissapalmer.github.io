@@ -114,7 +114,7 @@ body {
     background-color: $nav-bar-background-color;
     color: $nav-bar-color;
     border-radius:0;
-    border-top: 4px solid $nav-bar-brand-hover-color;
+    border-top: 4px solid $nav-bar-open-a-background-color;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -123,13 +123,13 @@ body {
 
 .navbar-custom .navbar-nav > .active > a {
     color: $nav-bar-color;
-    background-color:transparent;
+    background-color: $nav-bar-open-a-background-color;
 }
 
-.navbar-custom .navbar-nav > li > a:active {
-	text-decoration: none;
-    background-color: $nav-bar-brand-hover-color;
-}
+#.navbar-custom .navbar-nav > li > a:active {
+#	text-decoration: none;
+#    background-color: $nav-bar-brand-hover-color;
+#}
 
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus,
