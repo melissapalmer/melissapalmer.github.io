@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Newman with Docker"
 date: 2018-08-31 17:45:09 -0700
-categories: devops
+categories: testing
 tags: 
 - Postman
 - Docker
