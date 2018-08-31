@@ -78,7 +78,7 @@ The above command is doing the following:
 - Which has the Newman CLI as it's entry point, so you can use all Newman command line parameters. These can be found at [Command line integration with Newman](https://www.getpostman.com/docs/v6/postman/collection_runs/command_line_integration_with_newman)
 - above `run /tmp/HelloWorld.postman_collection.json` is passing a command to Newman to run the tests in collection /tmp/HelloWorld.postman_collection.json
 
-**This will FAIL** ....: if you remember in our, Postman script  we used the hostname of localhost (ie: http://localhost:4751/).
+**This will FAIL** ....: if you remember in our, Postman script  we used the hostname of localhost (ie: http://localhost:80/).
 
 # Docker Network
 
