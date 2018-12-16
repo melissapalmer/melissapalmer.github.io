@@ -217,13 +217,13 @@ K8s has some great getting started tutorials at: https://kubernetes.io/docs/user
 
 ## Prerequisites
 
-**Minikube**: v0.30.0		Install Instructions at: https://github.com/kubernetes/minikube
-**VitualBox:** 				Install Instructions at: https://www.virtualbox.org/wiki/Linux_Downloads
-**Helm:** v2.11.0			Install Instructions at: https://docs.helm.sh/using_helm/#installing-helm
-**Kubectl**: v1.10.0		Install Instructions at: https://kubernetes.io/docs/tasks/tools/install-kubectl
+- **Minikube**: v0.30.0		Install Instructions at: https://github.com/kubernetes/minikube
+- **VitualBox:** 				Install Instructions at: https://www.virtualbox.org/wiki/Linux_Downloads
+- **Helm:** v2.11.0			Install Instructions at: https://docs.helm.sh/using_helm/#installing-helm
+- **Kubectl**: v1.10.0		Install Instructions at: https://kubernetes.io/docs/tasks/tools/install-kubectl
 
 
-**minikube**: is a tool that makes it easy to run Kubernetes locally.\
+**minikube**: is a tool that makes it easy to run Kubernetes locally.
 **kubectl**: is a command line tool for communicating with the k8s API server. 
 
 First we need to get a K8s cluster running, do this by running the following command: 
