@@ -12,10 +12,7 @@ description: Deploying a Spring Boot app to K8s
 published: true
 ---
 
-
-# Deploying a Spring Boot app to K8s
-
-In this post I create a greeting RESTFul API with Spring, that queries a DB for its hello strings. Use Docker to create an image and run it in a container. I'll cover how to use docker compose to run multiple containers for the application (our app, and postgres DB). Finally deploying the app to a K8s cluster using Helm package manager.
+In this post I create a greeting RESTFul API with Spring, that queries a DB for it's hello strings. Use Docker to create an image and run it in a container. I'll cover how to use docker compose to run multiple containers for the application (our app, and postgres DB). Finally deploying the app to a K8s cluster using Helm package manager.
 
 Thank you to **The Practical Developer** as is post at: https://thepracticaldeveloper.com/2017/12/11/dockerize-spring-boot/ allot of this is based off of what he taught is there. 
 
@@ -26,6 +23,8 @@ Thank you to **The Practical Developer** as is post at: https://thepracticaldeve
 - [Docker Compose](https://docs.docker.com/compose/) is a tool for defining and running multi-container applications. 
 - [Kubernetes](https://kubernetes.io/) (commonly known as K8s) is an open-source container-orchestration system for automating deployment, scaling and management of containerised applications.
 - [Helm](https://docs.helm.sh/) is a package manager for K8s, it simplifies the installation of an application and its dependencies into a K8s cluster.
+
+This is a long post, each step could have been a post on its own.... you could read them in that way, to help tackle. 
 
 # 01-Create a Spring Boot Rest API
 
@@ -221,12 +220,11 @@ K8s has some great getting started tutorials at: https://kubernetes.io/docs/user
 **Minikube**: v0.30.0		Install Instructions at: https://github.com/kubernetes/minikube
 **VitualBox:** 				Install Instructions at: https://www.virtualbox.org/wiki/Linux_Downloads
 **Helm:** v2.11.0			Install Instructions at: https://docs.helm.sh/using_helm/#installing-helm
-**Kubectl**: v1.10.0			Install Instructions at: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+**Kubectl**: v1.10.0		Install Instructions at: https://kubernetes.io/docs/tasks/tools/install-kubectl
 
-**minikube**: is a tool that makes it easy to run Kubernetes locally.
+
+**minikube**: is a tool that makes it easy to run Kubernetes locally.\
 **kubectl**: is a command line tool for communicating with the k8s API server. 
-
-
 
 First we need to get a K8s cluster running, do this by running the following command: 
 ​	`minikube start --cpus 4 --memory 8192`
