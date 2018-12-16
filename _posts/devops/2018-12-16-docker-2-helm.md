@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Deploying a Spring Boot app to K8s"
-date: 2018-21-16 08:45:09 -0700
+date: 2018-12-16 08:45:09 -0700
 categories: devops
 tags: 
 - Docker
