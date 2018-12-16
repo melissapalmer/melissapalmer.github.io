@@ -382,10 +382,10 @@ Customised the `deployment.yaml` to include this ConfiMap as a volumeMounts and 
             # Note: 'app.jar' currently resides within the root folder.
             mountPath: /config
 ...
-	  volumes:
-      - name: configuration-volume
-        configMap:
-          name: {{ template "docker-2-helm.fullname" . }}-configmap
+          volumes:
+          - name: configuration-volume
+          configMap:
+            name: {{ template "docker-2-helm.fullname" . }}-configmap
 ```
 
 
@@ -436,7 +436,7 @@ postgresql:
 
 I also updated the chart a little: Instead of "hard-coding" the host name for DB URL for our app. I defined a variable in helm chart _helpers.tpl for the postgres setting
 
-```go
+```
 {{- define "postgresql.hostname" -}}
 {{- printf "%s-%s" .Release.Name "postgresql" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
@@ -444,7 +444,7 @@ I also updated the chart a little: Instead of "hard-coding" the host name for DB
 
 Then in the configuration.yaml we can use this template value as follows:
 
-```go
+```
 url: "jdbc:postgresql://{{ template "postgresql.hostname" . }}:{{- .Values.postgresql.service.port -}}/{{- .Values.postgresql.postgresqlDatabase -}}"
 ```
 
@@ -455,7 +455,7 @@ url: "jdbc:postgresql://{{ template "postgresql.hostname" . }}:{{- .Values.postg
 
 
 
-**As usual, the source code for this blog is on** [GitHub](https://github.com/melissapalmer/basic-java-app-2-helm)
+# As usual, the source code for this blog is on [GitHub](https://github.com/melissapalmer/basic-java-app-2-helm)
 
 # References
 
