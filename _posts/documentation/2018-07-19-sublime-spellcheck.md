@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Sublime Spell Check"
 date: 2018-07-19 17:45:09 -0700
 categories: documentation

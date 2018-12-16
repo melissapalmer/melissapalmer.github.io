@@ -17,7 +17,7 @@ layout: default
 
 <!-- List out all posts in this category -->
 <div class="well article">
-{% assign sortedcategories = site.categories.[page.category] %}
+{% assign sortedcategories = site.categories[page.category] %}
 {% for post in sortedcategories %}
     <ul>       
         <li><span class="post-date">
