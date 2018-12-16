@@ -241,8 +241,7 @@ I use Terminator  terminal emulators which allows multiple terminals in one wind
 
 ​	to install Teminator 	`sudo apt-get install terminator`
 
-![](TerminatorWindows.png)
-
+![Terminator Windows](/assets/images/devops/(TerminatorWindows.png)
 
 
 Helm has two parts, a client, helm, and a server, tiller. To install Tiller onto your k8s cluster you need to run
