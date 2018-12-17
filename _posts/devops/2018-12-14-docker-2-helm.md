@@ -437,16 +437,21 @@ postgresql:
 I also updated the chart a little: Instead of "hard-coding" the host name for DB URL for our app. I defined a variable in helm chart _helpers.tpl for the postgres setting
 
 {% raw %}
+```go
 {{- define "postgresql.hostname" -}}
 {{- printf "%s-%s" .Release.Name "postgresql" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+```
 {% endraw %}
 
 Then in the configuration.yaml we can use this template value as follows:
 
 {% raw %} 	
+```go
 url: "jdbc:postgresql://{{ template "postgresql.hostname" . }}:{{- .Values.postgresql.service.port -}}/{{- .Values.postgresql.postgresqlDatabase -}}"
+```
 {% endraw %}
+
 
 **To install this chart**
 
