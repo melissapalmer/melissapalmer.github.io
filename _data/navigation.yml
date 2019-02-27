@@ -6,9 +6,11 @@
   url: /testing.html
 - title: About
   url: /about.html
-    sublinks:
-    - title: Tech Radar
-      url: /tech-radar
+  sublinks:
+  - title: About Me
+    url: /about.html
+  - title: Tech Radar
+    url: /tech-radar
 #- title: Development
 #  url: /developement.html
 #  sublinks:
