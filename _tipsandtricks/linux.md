@@ -4,7 +4,7 @@ comments: true
 title: "Linux Ticks and Tricks"
 categories: tips and tricks
 tags: 
-- Vagrant
+- Linux
 description: Linux
 published: true
 ---
