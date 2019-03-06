@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Vagrant Ticks and Tricks"
 date: 2019-03-04 17:45:09 -0700
-categories: tipsandtricks
+categories: tips and tricks
 tags: 
 - Vagrant
 description: Vagrant Ticks and Tricks

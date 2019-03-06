@@ -27,7 +27,11 @@ disqus_id: melissa-palmer
 org_site: melissapalmer.github.io
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-  
+
+collections:
+  tipsandtricks :
+    output      : true 
+    premalink   : /:collection:/:path/
 
 paginate: 10
 
@@ -36,4 +40,5 @@ markdown: kramdown
 plugins: ['jekyll-paginate']
 future: true
 
+#include: ['_ticksandtricks']
 exclude: ['README.md', 'LICENSE', "*.bak"]
