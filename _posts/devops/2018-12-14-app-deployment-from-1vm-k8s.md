@@ -21,7 +21,7 @@ published: true
 
 Thank you to **The Practical Developer** for his post at: https://thepracticaldeveloper.com/2017/12/11/dockerize-spring-boot/ .  This is based off of what he taught there. 
 
-**I go through the following core technology stack, during this post:**
+**Technology stack:**
 
 - [Spring](https://spring.io/) is an application framework and inversion of control container for the Java platform.
 - [Docker](https://www.docker.com/)  is the container technology that allows you to containerise your applications.
@@ -55,11 +55,13 @@ You can also grab the code in my repo, on the 01-springboot-app branch in [GitHu
 Go to http://localhost:8080/hello to see a hello message. 
 Also test out the Spring Actuator endpoints: http://localhost:8080/actuator and http://localhost:8080/actuator/health
 
-**So far we have done nothing with Docker**, however it is important to understand, that we've: 
+### **So far we have done nothing with Docker**, however it is important to understand, that we've: 
 
-- only built and run the application locally: **using a pre-installed version** of Java &/or Maven. 
+- Only built and run the application locally: 
+  - using a pre-installed version of Java &/or Maven. 
 - If we were to hand this over to the an OP's team at this point: 
   - we'd need to specify to them what version of Java is needed
+  - which ports the application uses
 
 # **02-Containerise It** 
 
@@ -67,7 +69,7 @@ This step takes the Spring Boot application and creates a Docker image. You'll n
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)		Install Instructions: `sudo apt install docker`
+- [Docker](https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/ubuntu/)		To install docker run: `sudo apt install docker`
 
 Create a Dockerfile, as below, in your project. This is used to define an image, build it and run it using Docker commands.
 
