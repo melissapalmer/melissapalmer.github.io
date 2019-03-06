@@ -13,9 +13,13 @@ layout: default
 <br/>
 
 <div class="well article">
-{% for tips in site.tipsandtricks %}
-    <a href="{{ tips.url }}">
-      {{ tips.description }}
-    </a> </br>
+{% for tips in site.tipsandtricks %}   
+      <ul>       
+        <li>
+              <a href="{{ tips.url }}">
+                {{ tips.description }}
+                </a>    
+       </li> 
+    </ul>
 {% endfor %}
 </div>
