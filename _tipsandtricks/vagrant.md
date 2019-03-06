@@ -5,7 +5,7 @@ title: "Vagrant Ticks and Tricks"
 categories: tips and tricks
 tags: 
 - Vagrant
-description: Vagrant Ticks and Tricks
+description: Vagrant
 published: true
 ---
 

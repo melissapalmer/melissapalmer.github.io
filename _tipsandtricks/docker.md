@@ -5,7 +5,7 @@ title: "Docker Ticks and Tricks"
 categories: tips and tricks
 tags: 
 - Docker
-description: Docker Ticks and Tricks
+description: Docker
 published: true
 ---
 
