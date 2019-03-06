@@ -9,16 +9,17 @@ description: Docker
 published: true
 ---
 
-**SSH to docker container**
+**SSH to docker container**     `docker exec -i -t nameofcontainer_or_containerid sh`
 
-`docker exec -i -t nameofcontainer_or_containerid sh`
-
-**Copying files from Docker container to host**
+**Copying files from Docker container to host** 
 
 `docker cp <containerId>:/file/path/within/container /host/path/target`
+
 For example: 
 `sudo docker cp nameofcontainer_or_containerid:/app.jar .`
 
+**Get IP of docker container**
+`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' name_of_container`
 
 # References
 
