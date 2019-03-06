@@ -16,7 +16,7 @@ published: true
 
 1. A greeting RESTFul API with Spring, that queries a DB for it's hello strings. 
 2. Use Docker to create an image and run it in a container. 
-3. I'll cover how to use docker compose to run multiple containers for the application (our app, and postgres DB). 
+3. Use Docker Compose to run multiple containers for the application (our app, and postgres DB). 
 4. And finally deploying the app to a K8s cluster using Helm package manager.
 
 Thank you to **The Practical Developer** for his post at: https://thepracticaldeveloper.com/2017/12/11/dockerize-spring-boot/ .  This is based off of what he taught there. 
