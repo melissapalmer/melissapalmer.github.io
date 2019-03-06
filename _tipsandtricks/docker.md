@@ -19,7 +19,9 @@ For example:
 `sudo docker cp nameofcontainer_or_containerid:/app.jar .`
 
 **Get IP of docker container**
-`docker inspect -f {% raw  %}'{{ range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'{% raw  %} name_of_container`
+{% raw  %}
+`docker inspect -f '{{ range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' name_of_container`
+{% endraw %}
 
 # References
 
