@@ -158,9 +158,20 @@ body {
     font-size: 23px;
 }
 
+.dropdown-menu {
+     background-color: $nav-bar-background-color;
+}
 .dropdown-menu>li>a {
-    background-color: #28323c;
-    color: #fff;
+    background-color: $nav-bar-background-color;
+    color: $nav-bar-color;
+}
+.dropdown-menu>li>a {
+    background-color: $nav-bar-background-color;
+    color: $nav-bar-color;
+}
+.dropdown-menu>li>a:hover, {
+    text-decoration: none;
+    background-color: $nav-bar-open-a-background-color;
 }
 
 .h1, h1 {
