@@ -2,7 +2,6 @@
 layout: post
 comments: true
 title: "Docker Ticks and Tricks"
-date: 2019-03-04 17:45:09 -0700
 categories: tips and tricks
 tags: 
 - Docker
