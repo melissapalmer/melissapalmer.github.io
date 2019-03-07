@@ -9,17 +9,17 @@ description: Docker
 published: true
 ---
 
-##### Table of Contents 
+# Table of Contents 
 [SSH to docker container](#ssh_2_docker_container)  
 [Copying files from Docker container to host](#copy_files_from_container)
-[Get IP of docker container*](#get_id_of_container)  
+[Get IP of docker container](#get_id_of_container)  
 
 <a name="ssh_2_docker_container"/>
-## SSH to docker container
+### SSH to docker container
 `docker exec -i -t nameofcontainer_or_containerid sh`
 
 <a name="copy_files_from_container"/>
-## Copying files from Docker container to host 
+### Copying files from Docker container to host 
 
 `docker cp <containerId>:/file/path/within/container /host/path/target`
 
@@ -27,7 +27,7 @@ For example:
 `sudo docker cp nameofcontainer_or_containerid:/app.jar .`
 
 <a name="get_id_of_container"/>
-## Get IP of docker container
+### Get IP of docker container
 {% raw  %}
 `docker inspect -f '{{ range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' name_of_container`
 {% endraw %}
