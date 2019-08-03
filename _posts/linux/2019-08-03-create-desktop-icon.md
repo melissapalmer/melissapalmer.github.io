@@ -5,7 +5,7 @@ title:  "Create a desktop shortcut"
 date: 2019-08-03 06:45:09 -0200
 categories: linux
 tags: 
-- Tips
+- Utilities
 description: Create a desktop shortcut
 ---
 
