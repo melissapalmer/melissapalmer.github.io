@@ -4,6 +4,8 @@
   url: /devops.html
 - title: Testing
   url: /testing.html
+- title: Linux
+  url: /linux.html  
 - title: About
   url: /about.html
   sublinks:
