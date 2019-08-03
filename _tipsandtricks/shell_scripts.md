@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "Linux Ticks and Tricks"
+title: "Shell Scripts"
 categories: tips and tricks
 tags: 
 - Shell Scripts
