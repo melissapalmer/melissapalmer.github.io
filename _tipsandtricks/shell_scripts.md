@@ -4,8 +4,8 @@ comments: true
 title: "Linux Ticks and Tricks"
 categories: tips and tricks
 tags: 
-- Linux
-description: Linux
+- Shell Scripts
+description: Shell Scripts
 published: true
 ---
 
