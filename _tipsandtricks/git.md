@@ -18,8 +18,9 @@ The cherry-pick operations should be done in the same chronological order that t
 
 `cherry-pick` does support a range of commits, but if you have merge commits in that range, it gets really complicated
 
+```bash
 git checkout branch-B
 git cherry-pick X
 git cherry-pick Y
-
+```
 _Reference_ [https://gist.github.com/unbracketed/889c844473bcca1917e2](https://gist.github.com/unbracketed/889c844473bcca1917e2)
