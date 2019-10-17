@@ -13,7 +13,8 @@ published: true
 * [Count all files recursively](#count_all_files_recursively)  
 
 <a name="find_process_running_on_port"/>
-**Find process running on port 9981**     `sudo netstat -ltnp | grep -w ':9981'`
+**Find process running on port 9981**     
+`sudo netstat -ltnp | grep -w ':9981'`
 *NOTE:* to run the above you do need `net-tools` installed you can use `sudo apt-get install net-tools` to install 
 
 <a name="count_all_files_recursively"/>
