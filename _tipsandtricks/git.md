@@ -12,7 +12,7 @@ published: true
 * [Moving commits between branches](#moving_commits_btw_branches)  
 
 <a name="moving_commits_btw_branches"/>
-#### Moving commits between branches
+# Moving commits between branches
 Branch A has commits (X,Y) that also need to be in Branch B. 
 The cherry-pick operations should be done in the same chronological order that the commits appear in Branch A.
 
