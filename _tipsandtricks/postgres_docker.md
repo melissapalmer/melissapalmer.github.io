@@ -13,7 +13,7 @@ published: true
 # Log into Postgres on a Docker container
 ```
 docker exec -it <container_name> psql -U <database_username>
-``
+```
 
 # Log into a Postgres DB on a Docker container
 ```
