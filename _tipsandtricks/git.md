@@ -65,6 +65,17 @@ _Reference_ [https://gist.github.com/unbracketed/889c844473bcca1917e2](https://g
       [user]
       	email = melissa.palmer@company-name.com
       ```
+  
+- test that your setup is working
+
+  - PERSONAL folder
+    - `cd ~/work/mp/a-work-repository`
+    - Run `git config user.email`
+    - you should see the setting for  `melissa.palmer@personalemail.com`
+  - WORK
+    - `cd ~/work/company-name/a-work-repository`
+    - Run `git config user.email`
+    - you should see the setting for  `melissa.palmer@company-name.com`
 
 *References* 
 
