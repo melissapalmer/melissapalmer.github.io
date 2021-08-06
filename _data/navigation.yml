@@ -2,10 +2,15 @@
   url: /documentation.html
 - title: DevOps
   url: /devops.html
+  sublinks:
+  - title: Linux
+    url: /linux.html
 - title: Testing
-  url: /testing.html
-- title: Linux
-  url: /linux.html  
+  url: /testing.html  
+- title: AWS
+  url: /aws.html
+- title: Tips & Tricks
+  url: /tips-and-tricks.html
 - title: About
   url: /about.html
   sublinks:
@@ -23,7 +28,3 @@
 #    - title: separator
 #    - title: Go
 #      url: /customer-support.html
-- title: AWS
-  url: /aws.html
-- title: Tips & Tricks
-  url: /tips-and-tricks.html
