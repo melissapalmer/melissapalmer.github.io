@@ -32,6 +32,9 @@ collections:
   tipsandtricks :
     output      : true 
     premalink   : /:collection:/:path/
+  aws : 
+    output      : true
+    permalink   : /:collection:/:path/
 
 paginate: 10
 

@@ -13,11 +13,11 @@ layout: default
 <br/>
 
 <div class="well article">
-{% for tips in site.tipsandtricks %}   
+{% for a in site.aws %}   
       <ul>       
         <li>
-              <a href="{{ tips.url }}">
-                {{ tips.description }}
+              <a href="{{ a.url }}">
+                {{ a.description }}
                 </a>    
        </li> 
     </ul>
