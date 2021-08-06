@@ -23,5 +23,7 @@
 #    - title: separator
 #    - title: Go
 #      url: /customer-support.html
+- title: AWS
+  url: /aws.html
 - title: Tips & Tricks
   url: /tips-and-tricks.html
