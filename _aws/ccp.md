@@ -6,7 +6,7 @@ categories: AWS
 tags: 
 - AWS
 description: AWS CCP
-published: true
+published: false
 ---
 
 AWS Certified Cloud Practitioner (CCP) Exam
